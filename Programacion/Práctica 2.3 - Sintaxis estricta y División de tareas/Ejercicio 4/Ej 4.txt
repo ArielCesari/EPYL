@@ -1,0 +1,340 @@
+
+/* Figura 6 */ 
+
+procedimiento DibujaLineaDiagonalDeCuatroCeldas() {
+    /* Proposito: Dibujar una linea diagonal roja de 4 celdas. El cabezal  inicia
+    en la parte inferior de la linea y finaliza 3 celdas hacia arriba y 3 celdas a 
+    la derecha del inicio. 
+    Pre condicion: Debe existir, por lo menos, 3 cedas hacia arriba y 3 a la derecha
+    desde donde inicia el cabezal */ 
+    
+    PintarRojo
+    MoverDerecha
+    MoverArriba
+    PintarRojo
+    MoverDerecha
+    MoverArriba
+    PintarRojo
+    MoverDerecha
+    MoverArriba
+    PintarRojo
+
+}
+
+/* Figura 7 */
+
+procedimiento DibujaLineaDiagonalDeTresCeldas() {
+    /* Proposito: Dibujar una linea diagonal roja de 3 celdas. El cabezal inicia
+    en la parte superior de la linea y  finaliza 2 celdas hacia abajo  y 2 celdas
+    a la derecha.
+    Pre condicion: Debe existir, por lo menos, 2 celdas hacia abajo y dos hacia la
+    derecha desde donde incia el cabeza */ 
+
+    PintarRojo
+    MoverAbajo
+    MoverDerecha
+    PintarRojo
+    MoverAbajo
+    MoverDerecha
+    PintarRojo
+
+}
+
+/* Figura 5 */
+
+procedimiento DibujarLineaVerticualDeDosCeldas(){
+    /* Proposito: Dibujar una  linea vertical negra que presenta una columna que 
+    ocupe dos celdas. El cabezal inicia en la parte superior y finaliza en la base. 
+    Precondicion: Debe existir al menos una celda hacia abajo desde donde inicia
+    cabezal */ 
+
+    PintarNegro
+    MoverAbajo
+    PintarNegro
+}
+
+/* Figura 9 */ 
+
+procedimiento PintarCelda(){
+    /* Proposito: Pintar una celda de color negro. El cabeza inicia y finaliza
+    en la celda a pintar.
+    Precondicion: Debe existir al menos una celda.
+    
+    PintarNegro
+}
+
+/* Figura 1 */
+
+procedimiento DibujarLineaVerticualDeCuatroCeldas(){
+    /* Proposito: Dibujar una  linea Vertical negra  que presenta una  columna  que 
+    ocupe cuatro celdas. El cabezal inicia en la parte superior y finaliza en la base. 
+    Precondicion: Debe existir al menos tres celdas hacia abajo desde donde inicia
+    cabezal */ 
+
+    PintarNegro
+    MoverAbajo
+    PintarNegro
+    MoverAbajo
+    PintarNegro
+    MoverAbajo
+    PintarNegro
+}
+
+/* Figura 3 */ 
+
+procedimiento DibujarLineaHorizontalDeSieteCeldas(){
+    /*Proposito: Dibujar una linea horizontal negra que respresenta una fila que
+    ocupe 7 celdas. El cabeza inicia en el comienzo de la fila y finaliza 6 celdas
+    a la derecha.
+    Precondicion: Debe existir al menos 6 celdas a la derecha desde donde inicia 
+    el cabezal
+    
+    PintarNegro
+    MoverDerecha 
+    PintarNegro
+    MoverDerecha 
+    PintarNegro
+    MoverDerecha 
+    PintarNegro
+    MoverDerecha 
+    PintarNegro
+    MoverDerecha 
+    PintarNegro
+    MoverDerecha 
+    PintarNegro
+
+
+}
+
+procedimiento IrAlTechoIzq(){
+    /* Proposito: Llevar el cabezal a la celda necesaria para comenzar a dibujar
+    el lado izquierdo del techo de una casa. El cabezal finaliza 4 celdas hacia arriba.
+    Pre condicion: Debe existir al menos 4 celdas hacia arriba desde el inicio del
+    cabezal
+
+    MoverArriba
+    MoverArriba
+    MoverArriba
+    MoverArriba
+}
+
+procedimiento IrAlTechoDerecho(){
+    /* Proposito: LLevar el cabezal hacia la celda necesaria para comenzar a dibujar
+    el lado derecho del techo de una casa. El cabezal inicia En la parte superior del techo izq y 
+    finaliza 1 celda a la derecha y 1 celda  hacia abajo */ 
+    Precondicion: Debe existir al menos 1 celda hacia la derecha  y 1 hacia abajo
+    desde donde inicia el cabezal
+
+    MoverDerecha
+    MoverAbajo
+
+}
+
+procedimiento IrAChimena(){
+    /* Propsito: Mover el cabezal a la celda necesaria para comenzar a dibujar 
+    la chimena. El Cabezal inicia en el extremo inferior del techo derecho y finaliza 
+    3  celdas hacia arriba y una hacia la izquierda  
+    Pre condicion: Debe existir, al menos 3 celdas hacia arriba y 1 hacia la izquierda 
+    
+    MoverArriba
+    MoverArriba
+    MoverArriba
+    MoverIzquierda
+
+}
+
+procedimiento IrAParedIzquierda(){
+    /* Proposito: Mover el cabezal a la posicion necesaria para comenzar a dibujar
+    la pared izquierda. El cabezal inicia en la base de la chimenea y finaliza
+    4 celdas a la izquierda y dos hacia abajo 
+    Precondicion: Debe existir, al menos, 4 celdas celdas hacia la izquierda y
+    y dos 2 celdas hacia abajo desde donde inicia el cabezal */
+
+    MoverIzquierda
+    MoverIzquierda
+    MoverIzquierda
+    MoverIzquierda
+    MoverAbajo
+    MoverAbajo
+}
+
+
+procedimiento IrAParedADerecha(){
+    /* Proposito: Mover el cabezal a la posicion necesaria para comenzar a dibujar
+    la pared derecha. El cabezal inicia en la base de la pared izquierda y finaliza
+    4 celdas a la derecha y 3 celdas hacia arriba.
+    Pre condicion: Debe existir al menos, 4 celdas a la derecha y 3 celdas 
+    Hacia arriba desde donde inicia el cabezal */
+
+    MoverDerecha
+    MoverDerecha
+    MoverDerecha
+    MoverDerecha
+    MoverArriba
+    MoverArriba
+    MoverArriba
+
+    }
+    
+    procedimiento IrAVentana(){
+        /* Proposito: Mover el cabezal a la posicion necesaria para dibujar la 
+        ventana. El Cabezal inicia en la base de la pared izquierda y finaliza 2 
+        celdas a la izquierda y 3 celdas hacia arriba.
+        Precondicion: Debe existir al menos 2 celdas a la izquierda y 3 celdas hacia 
+        arriba desde donde inicia el cabezal */
+
+        MoverIzquierda
+        MoverIzquierda
+        MoverArriba
+        MoverArriba
+        MoverArriba
+    }
+
+    procedimiento IrAPuerta(){
+        /*Proposito: Mover el cabezal a la posicion necesaria para comenzar a dibujar
+        la puerta. El Cabezal inicia en la ventana y finaliza  dos celdas hacia abajo.
+        Precondicion: Debe existir al menos dos celdas hacia abajo desde donde inicia el cabezal*/
+        
+        MoverAbajo
+        MoverAbajo
+
+    }
+
+    procedimiento IrAlPiso(){
+        /* Proposito: Mover el cabezal a la posicion necesaria para comenzarar a dibujar
+        el piso. El Cabezal inicia en la base de la puerta y finaliza una celda hacia abajo
+        y 3 celdas a la izquierda.
+        precondicion: Debe existir al menos una celda hacia abajo y 3 celdas a la izquierda
+        desde donde inicia el cabezal */
+
+        MoverAbajo
+        MoverIzquierda
+        MoverIzquierda
+        MoverIzquierda
+    }
+
+
+    procedimiento DibujarTechoIzq(){
+        /* Proposito: Dibujar techo izquierdo de una casa. De color rojo. El Cabezal
+        inicia en el extemo inferior izquierdo y finaliza 3 celdas hacia arriba y 3
+        celdas a la derecha.
+        precondicion: Debe existir, desde donde inicia el cabezal, al menos 3 celdas
+        a la derecha y 3 hacia arriba */ 
+
+        
+        DibujaLineaDiagonalDeCuatroCeldas() 
+
+    }
+
+    procedimiento DibujarTechoDerecho(){
+        /* Proposito: Dibujar techo derecho de una casa. De color rojo. El Cabezal
+        inicia en el extemo superior izquierdo y finaliza 2 celdas hacia la derecha 
+        y dos celdas hacia abajo
+        precondicion: Debe existir, desde donde inicia el cabezal, al menos 2 celdas
+        a la derecha y 2 hacia abajo */ 
+
+       
+       DibujaLineaDiagonalDeTresCeldas()
+
+    }
+
+    procedimiento DibujarChimenea(){
+        /* Proposito: Dibujar la chimena de una casa. De color negro. El Cabezal
+        inicia 2 celdas a la derecha  desde la parte mas alta del techo y  finaliza un celda hacia abajo desde donde
+        inicia el cabezal.
+        Precondicion: Debe existir al menos, 2 celdas hacia derecha  y una hacia abajo desde donde inicia el cabezal.
+        desde donde inicia el cabezal */
+
+       
+        DibujarLineaVerticualDeDosCeldas()
+
+
+    }
+
+
+    procedimiento DibujarParedIzq(){
+        /* Proposito: Dibujar pared izquierda de color negro. El Cabezal inicia una
+        celda a la derecha del extremo inferior izquierda del techo  y finaliza  3 celdas hacia abajo
+        Precondicion: Debe existir, al menos, 3 celdas hacia abajo desde donde inicia el cabezal 
+        desde donde inicia el cabezal */
+
+        
+        DibujarLineaVerticualDeCuatroCeldas()
+    }
+
+    procedimiento DibujarParedDerecha(){
+        /* Proposito: Dibujar pared derecha de color negro. El cabezal inicia 1 celda
+        a la izquierda del extremo inferior del techo derecho y finaliza 3 celdas hacia abajo
+        Precondicion: Debe existir al menos 3 celdas hacia abajo desde donde inicia el cabezal. */
+
+        DibujarLineaVerticualDeCuatroCeldas()
+    }
+
+    procedimiento DibujarVentana(){
+        /*Proposito: Dibujar una ventana verde. El Cabeza inicia dos celdas a la izquierda del extremo
+        superior de la pared derecha y finaliza en la misma celda 
+        Precondicion:Debe existir al menos dos celdas a la izquierda desde donde inicia el cabezal */
+
+        PintarVerde
+    }
+
+    procedimiento DibujarPuerta(){
+        /* Proposito: Dibujar una puerta negra. El Cabezal inicia 5 celdas hacia abajo  desde el extemo mas alto 
+        del techo  y finaliza una celda hacia abajo desde donde inicia el cabezal.
+        Debe existir una celda hacia abajo desde donde inicia el cabezal.  */
+
+        DibujarLineaVerticualDeDosCeldas()
+
+    }
+
+    procedimiento DibujarPiso(){
+        /* Proposito: Dibujar piso de color negro. El Cabezal inicia en el extremo izquierdo del piso
+        y finaliza 6 celdas a la derecha 
+        Precondicion Deben existir al menos 6 celdas a la derecha desde donde inicia el cabezal */
+
+        DibujarLineaHorizontalDeSieteCeldas()
+
+
+    }
+
+
+    procedimiento DibujarCasa(){
+        /* Proposito: Dibujar una casa con una ventana verde y una puerta. Con un techo rojo en forma
+        de pino de color rojo. 
+        La Base de la casa, las paredes, la puerta y su chimenea, serán de color negro. El Cabezal
+        inicia en un extremo izquierdo y finaliza 6 celdas a la derecha. 
+        Precondicion: Debe existir desde donde incia el cabezal 7 celdas hacia arriba y
+        6 celdas a la derecha */
+
+        IrAlTechoIzq()
+        DibujarTechoIzq()
+        IrAlTechoDerecho()
+        DibujarTechoDerecho()
+        IrAChimena()
+        DibujarChimenea()
+        IrAParedIzquierda()
+        DibujarParedIzq()
+        IrAParedADerecha()
+        DibujarParedDerecha()
+        IrAVentana()
+        DibujarVentana()
+        IrAPuerta()
+        DibujarPuerta()
+        IrAlPiso()
+        DibujarPiso()
+    }
+
+
+    programa {
+        /* Proposito: Dibujar una casa con una ventana verde y una puerta. Con un techo rojo en forma
+        de pino de color rojo. 
+        La Base de la casa, las paredes, la puerta y su chimenea, serán de color negro. El Cabezal
+        inicia en un extremo izquierdo y finaliza 6 celdas a la derecha. 
+        Precondicion: Debe existir desde donde incia el cabezal 7 celdas hacia arriba y
+        6 celdas a la derecha */
+        
+        DibujarCasa()
+
+
+}
+

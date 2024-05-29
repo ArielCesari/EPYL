@@ -1,0 +1,230 @@
+Ejercicio 1
+Responder verdadero o falso según corresponda, justificando su respuesta (en ambos casos):
+
+1. Anidar repeticiones es una mala práctica VERDADERO
+Si anidamos repeticiones, se hace dificil leer el código y esto genera que el propósito no sea claro. Además, estamos más propensos a cometer
+errores graves. Y por último, el código se hace más largo.
+
+
+2. La repetición simple es un algoritmo que resuelve el problema en una cantidad fija de
+pasos DUDA
+
+
+3. Dentro del bloque de código de la repetición sólo podemos incluir primitivas del lenguaje FALSO.
+Dentro del bloque de código de la repetición, ademas de primitivas del lenguaje,  también podemos incluir procedimientos.
+
+
+4. Una forma de solucionar la anidación de repeticiones es descomponiendo el problema. VERDADERO
+La forma correcta seria descomponiendo el problema en procedimientos.
+
+5. El valor N de la instrucción repetición permite desplazarnos fuera de los límites del
+tablero FALSO
+El valor N de la instruccion repetir, nos indica el numero de veces que se repetirá la instucción dentro de las llaves. 
+
+6. Para evitar escribir el mismo bloque código reiteradas veces se utiliza la instrucción repetir FALSO
+La instruccion completa es repetir N veces, donde N es un numero real .
+
+7. No hay repetición si el mismo bloque de código se ejecuta sólo una vez VERDADERO
+Seria una mala practica utilizar la repeticion en este caso, ya que no es necesario. 
+
+8. El propósito y la precondición nunca están relacionados con la repetición. FALSO
+El propopsito y la precondicion estarán realiacionados con la repeticion, ya que es necesario conocer el propopsito 
+y debemos tener en cuenta la precondicion al momento de trabajar con repeticiones. 
+
+ACTIVIDAD DE LA DIAPOSITIVA DE LA TEORIA
+
+1-
+
+procedimiento DibujarLineaNegra(){
+    /* Proposito: Dibujar un linea  negra de 5 celdas en QDraw. El Cabezal inicia en el extremo inferior izquierdo  y finaliza 4 celdas a 
+    la derecha 
+    Precondicion: Debe existir al menos 4 celdas a la derecha desde donde inicia el cabezal */ 
+
+    PintarNegro
+    MoverDerecha
+    PintarNegro
+    MoverDerecha
+    PintarNegro
+    MoverDerecha
+    PintarNegro
+    MoverDerecha
+    PintarNegro
+
+}
+
+
+procedimiento IrAProximaFila(){
+    /* Proposito: Mover el cabezal a la posicion necesaria para continuar  dibujando un cuadrado negro.
+    El cabezal Inicia en una celda y finaliza una celda hacia arriba y 4 a la izquierda
+    Precondicion: Debe Existir al menos una celda hacia arriba y 4 a la izquierda desde donde inicia el cabezal */
+    
+    MoverArriba
+    MoverIzquierda
+    MoverIzquierda
+    MoverIzquierda
+    MoverIzquierda
+
+}
+
+procedimiento DibujarLienasNegras(){
+    /* Proposito: Dibujar un cuadrado negro de 5x5. El Cabezal inicia en el extremo inferior izquierdo y  finaliza 
+    en el extremo superior derecho
+    Precondicion: Debe existir al menos 4 celdas a la derecha y 4 hacia arriba desde donde inicia el cabezal */
+
+    repetir 4 veces {
+        DibujarLineaNegra()
+        IrAProximaFila()
+    }
+
+     DibujarLineaNegra()
+
+
+}
+
+2- 
+
+procedimiento DibujarLineaNegraDeCincoCeldas(){ 
+    /*Proposito: Dibujar una linea Negra horizontal de cinco celdas. El Cabezal Inicia en el extremo izquierdo de la linea
+    y finaliza 4 celdas a la derecha.
+    Precondicion: Debe existir al menos 4 celdas a la derecha desde donde inicia el cabezal.*/
+
+    PintarNegro
+    MoveDerecha
+    PintarNegro
+    MoveDerecha
+    PintarNegro
+    MoveDerecha
+    PintarNegro
+    MoveDerecha
+    PintarNegro
+
+}
+
+
+procedimiento IrASiguienteFila(){
+    /* Proposito: Llevar el cabezal al inicio de la siguiente fila para continuar dibujando lineas horizontales negras,
+    una arriba de la otra. El Cabezal inicia en el extremo inferior derecho y finaliza una celda hacia arriba y 3 celdas a la izquierda
+    Precondicion: Debe existir al menos 1 celda hacia arriba y 3 hacia la izquierda  */
+
+    MoverArriba
+    repetir 3 veces {
+        MoverIzquieda
+    }
+
+
+}
+
+procedimiento DibujarParalelogramo(){
+    /* Proposito: Dibujar una paralegramo. Cada linea vertical contendrá 5 celdas negras. Seran 5 lineas horizontales. 
+    El Cabezal inicia en el extremo inferior derecho de la primera linea y finaliza 4 celdas hacia arriba y 8 celdas a la derecha.
+    Precondicion: Debe existir al menos 8 celdas a la derecha y 4 celdas hacia arriba. */ 
+
+    repetir 4 veces {
+        DibujarLineaNegraDeCincoCeldas()
+        IrASiguienteFila()
+    }
+
+    DibujarLineaNegraDeCincoCeldas()
+
+
+}
+
+
+Actividad 2 
+
+procedimiento PintarCeldaNegra(){
+    /* Proposito: Pintar una celda de negro. El Cabezal inicia a la izquierda de la celda a pintar.
+    Precondicion: Debe existir al menos una celda a la derecha desde donde inicia el cabezal */ 
+
+        
+        MoverDerecha
+        PintarNegro
+        
+    
+}
+
+procedimiento DibujarBaseDeLaPiramide(){
+    /* Proposito: Dibujar una linea negra horizontal que ocupe 7 celdas. El
+cabezal comienza a la izquierda de la esquina inferior izquierda de la linea. Finaliza 7 celdas a la derecha 
+Precondicion: Debe existir al menos 7 celdas a la derecha desde donde inicia el cabezal. El tablero tiene 8 celdas de ancho. */
+
+    repetir 7 veces {
+        PintarCeldaNegra()
+    }
+
+
+}
+
+procedimiento IrASiguienteEscalon() {
+    /* Proposito: Llevar el cabezal al próximo escalon. El Cabezal inicia en la ultima celda del 
+    lado derecho del tablero. Y finaliza  7 celdas a la  izquieda 
+    Precondicion: Debe existir al menos una celda hacia arriba y 7 celdas a la derecha. El tablero tiene 8 celdas de ancho.  */
+
+    MoveArriba
+    repetir 7 veces {
+        MoverIzquierda
+    }
+}
+
+procedimiento DibujarSegundoEscalonDeLaPiramide(){
+    /* Proposito: Dibujar el segundo escalon de la piramide.  Será una linea
+    horizontal negra. El Cabezal inicia dos celdas a la izquierda del extremo  izquierdo de la linea y finaliza  7 celdas
+    a la derecha del inicio del cabezal
+    Precondicion: Debe existir al menos 7 celdas a la derecha desde donde inicia el cabezal. El tablero tiene 8 celdas de ancho. 
+    El tablero tiene 8 celdas de ancho.  */ 
+
+    MoverDerecha
+    repetir  5 veces {
+        PintarCeldaNegra()
+    }
+    MoverDerecha
+}
+
+procedimiento DibujarTercerEscalonDeLaPiramide(){
+    /* Proposito: Dibujar el tercer escalon de la piramide. Será una linea horizontal negra. El cabezal inicia 3 celdas a la izquierda
+    del extremo izquierdo de la linea y finaliza 7 celdas a la derecha
+    Precondicion: Debe existir al menos 7 celdas a la derecha desde donde inicia el cabezal.
+    El tablero tiene 8 celdas de ancho. */
+
+    MoverDerecha
+    MoverDerecha
+    repetir 3 veces {
+        PintarCeldaNegra()
+    }
+    MoverDerecha
+    MoverDerecha
+}
+
+procedimiento DibujarCimaDeLaPiramide(){
+    /* Proposito: Dibujar la punta de la piramide. Será una celda pintada de negro. El Cabezal comienza 4 celdas a la izquierda
+    y finaliza en la celda a pintar.
+    Precondicion: Deben existir al menos 4 celdas a la izquierda desde donde inicia el cabezal.
+    El tablero tiene 8 celdas de ancho. */ 
+
+    MoverDerecha
+    MoverDerecha
+    MoverDerecha
+    PintarCeldaNegra()
+}
+
+
+
+procedimiento DibujarPiramide(){
+    /* Proposito: Dibujar una piramide negra . Su base ocupará 7 celdas, el primer escalon ocupará 5, el segundo 3 y la cima 1.
+    El cabezal comienza a la izquierda de la esquina inferior izquierda de la base de la  pirámide. Finaliza en la cima de la piramide
+    Precondicion: Debe existir al menos 7 celdas a la derecha y 4 celdas hacia arriba. El tablero tiene 8 celdas de ancho. */ 
+
+    DibujarBaseDeLaPiramide()
+    IrASiguienteEscalon()
+    DibujarSegundoEscalonDeLaPiramide()
+    IrASiguienteEscalon()
+    DibujarTercerEscalonDeLaPiramide()
+    IrASiguienteEscalon()
+    DibujarCimaDeLaPiramide()
+
+
+}
+
+
+
+

@@ -1,0 +1,18 @@
+Ejercicio 6 
+
+procedimiento DibujarRey(){
+    /* Proposito: Dibujar un rey con sus columnas laterales y la base. Todo el dibujo debe ser de color negro.
+    Precondicion: Debe existir al menos 4 celdas hacia arriba y 4 celdas a a derecha desde donde inicia el cabezal */ 
+
+    IrACorona()
+    DibujarCorona()
+    IrACuerpo()
+    DibujarCuerpo()
+    IrATorreIzquierda()
+    DibujarTorreIzquierda()
+    IrATorreDerecha()
+    DibujarTorreDerecha()
+    IrABase()
+    DibujarBase()
+
+}

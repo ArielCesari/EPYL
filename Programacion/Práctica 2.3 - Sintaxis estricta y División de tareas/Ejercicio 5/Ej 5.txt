@@ -1,0 +1,215 @@
+/* Figura 10 */ 
+
+procedimiento DibujarCuadradoRojo(){
+
+    /* Proposito: Dibujar un cuadrado rojo de 2x2. El cabezal inicia en la parte inferior izquierda y finaliza
+    en la parte inferior derecha.
+    Precondicion: Debe existir al menos 1 celda hacia arriba  y una a la derecha desde donde inicia el cabezal */
+
+    PintarRojo
+    MoverArriba
+    PintarRojo
+    MoverDerecha
+    PintarRojo
+    MoverAbajo
+    PintarRojo
+}
+
+/* Figura 11 */
+
+procedimiento DibujarLineaVerticalVerde(){
+    /* Proposito: Dibujar una linea vertical verde que ocupe 7 celdas. El Cabezal inicia en el extremo superior
+    De la linea y finaliza 6 celdas hacia abajo. 
+    Precondicion: Debe existir al menos 6 celdas hacia abajo desde donde inicia el cabezal */
+
+    PintarVerde
+    MoverAbajo
+    PintarVerde
+    MoverAbajo
+    PintarVerde
+    MoverAbajo
+    PintarVerde
+    MoverAbajo
+    PintarVerde
+    MoverAbajo
+    PintarVerde
+    MoverAbajo
+    PintarVerde
+   
+}
+
+/* Figura 4 */ 
+
+procedimiento DibujarRectanguloNegro(){
+    /* Proposito: Dibujar un rectangulo negro de 3 de ancho x 2 de alto. El cabezal inicia en la parte inferior izquierda y finaliza
+    2 celdas hacia la derecha y una hacia arriba.
+    Precondicion: Debe existir al menos, 1 celda hacia arriba y 2 celdas a la derecha desde donde  inicia el cabezal */
+
+    PintarNegro
+    MoverArriba
+    PintarNegro
+    MoverDerecha
+    PintarNegro
+    MoverAbajo
+    PintarNegro
+    MoverDerecha
+    PintarNegro
+    MoverArriba
+    PintarNegro
+
+}
+
+
+procedimiento IrAntenaIzquierda(){
+    /* Proposito: Mover el cabezal hasta la posisicion necesaria para comenzar a Dibujar
+    la antena izquierda de una insecto. El  cabezal finaliza en el extremo
+    inferior izquierdo de la antena 3 celdas hacia arriba desde donde inicia.
+    Precondicion: Debe existir al menos 3 celdas hacia arriba desde donde inicia el cabezal. */
+    
+    MoverArriba
+    MoverArriba
+    MoverArriba
+
+}
+
+procedimiento DibujarAntenaIzquierda() {
+    /* Proposito: Dibujar la antena izquierda de un insecto. La misma será un cuadrado  rojo de 4 x 4.
+    El Cabezal inicia en el extremo inferior izquierdo y finaliza  una celda a la derecha.
+    Precondicion : Debe existir al menos 1 celda a la derecha desde donde inicia el cabezal.
+
+    DibujarCuadradoRojo()
+}
+
+
+procedimiento IrAntenaDerecha(){
+    /* Proposito: Mover el cabezal hasta la posisicion necesaria para comenzar a Dibujar
+    la antena derecha de una insecto. El  cabezal inicia en la parte inferior derecha de la antena izquierda .
+    Finaliza dos celdas a la derecha.
+    Precondicion: Debe existir al menos, dos celdas a la derecha desde donde inicia el cabezal */
+
+    MoverDerecha
+    MoverDerecha
+
+}
+
+procedimiento DibujarAntenaDerecha() {
+    /* Proposito: Dibujar la antena derecha de un insecto. La misma será un cuadrado  rojo de 4 x 4.
+    El Cabezal inicia en el extremo inferior izquierdo y finaliza  una celda a la derecha.
+    Precondicion : Debe existir al menos 1 celda a la derecha desde donde inicia el cabezal.
+
+    DibujarCuadradoRojo()
+}
+
+procedimiento IrAlaDerecha (){
+    /* Proposito: Mover el cabezal a la posiscion necesaria para comenzar a dibujar el ala derecha. El Cabezal inicia en 
+    la parte inferior derecha de la antena y finaliza 3 celdas hacia abajo y una a la izquierda.
+    Precondicion: Debe existir al menos, 3 celdas hacia abajo y una a la izquierda desde donde inicia el cabezal. */
+
+    MoverAbajo
+    MoverAbajo
+    MoverAbajo
+    MoverIzquierda
+}
+
+procedimiento DibujarAlaDerecha() {
+    /* Proposito: Dibujar el ala derecha de un insecto. La mismá sera un cuadrado rojo de 4x4.
+    El cabezal inicia en la parte inferior izquierda del ala a dibujar y finaliza una celda hacia la derecha.
+    Precondicion: Debe existir al menos una celda a la derecha desde donde inicia el cabezal.
+
+    DibujarCuadradoRojo()
+
+}
+
+procedimiento IrAlaIzquierda() {
+    /* Proposito: Mover el cabezal a la posiscion necesaria para comenzar a dibujar el ala izquierda. El Cabezal inicia en 
+    la parte inferior derecha del ala derecha finaliza 4 celdas hacia la izquierda.
+    Precondicion: Debe existir al menos, 4 celdas hacia la izquierda desde donde inicia el cabezal.  */ 
+
+    MoverIzquierda
+    MoverIzquierda
+    MoverIzquierda
+    MoverIzquierda
+}
+
+procedimiento DibujarAlaIzquierda() {
+    /* Proposito: Dibujar el ala izquierda de un insecto. La mismá sera un cuadrado rojo de 4x4.
+    El cabezal inicia en la parte inferior izquierda del ala a dibujar y finaliza una celda hacia la derecha.
+    Precondicion: Debe existir al menos una celda a la derecha desde donde inicia el cabezal.
+
+    DibujarCuadradoRojo()
+
+}
+
+procedimiento IrACuerpo(){
+    /* Prosposito: Mover el cabezal hacia la posicion necesaria para comenzar a dibujar el cuerpo del insecto.
+    El Cabezal inicia en la parte inferior derecha del ala izquierda. Finaliza una celda a la derecha y 2 celdas
+    Hacia Arriba.
+    precondicion: Debe existir al menos una celda a la derecha y 2 hacia arriba desde donde inicia el cabeza */
+
+    MoverIzquierda
+    MoverArriba
+    MoverArriba
+}
+
+procedimiento DibujarCuerpo(){
+    /* Proposito: Dibujar el cuerpo de un insecto. El mismo será   una linea vertical verde. El Cabezal inicia en el extremo
+    Superior de la linea  y finaliza 7 celdas hacia abajo.
+    precondicion: Debe existir al menos 7 celdas hacia abajo desde donde inicia el cabezal.
+
+    DibujarLineaVerticalVerde()
+}
+
+procedimiento IrACola(){
+    /* Proposito: Mover el cabezal a la posisicion necesaria para comenzar a dibujar la cola del insecto.
+    El cabezal inicia en el extremo inferior del cuerpo del insecto. Finaliza 2 celda hacia abajo y una 
+    a la izquierda */
+
+    MoverAbajo
+    MoverAbajo
+    MoverIzquierda. 
+}
+
+procedimiento DibujarCola() {
+    /* Proposito: Dibujar la cola del insecto. La misma será  un rectangulo negro de 3 de ancho x 2 de alto.
+    El cabezal inicia en la parte inferior izquierda y finaliza
+    2 celdas hacia la derecha y una hacia arriba.
+    Precondicion: Debe existir al menos, 1 celda hacia arriba y 2 celdas a la derecha desde donde  inicia el cabezal */
+
+    DibujarRectanguloNegro()
+}
+
+
+procedimiento DibujarInsecto(){
+    /* Proposito: Dibujar un insecto. Sus dos antenas y alas, serán de color rojo. El cuerpo será verde y la cola negra.
+    Precondicion: Debe existir, al menos 4 celdas hacia arriba, 4 celdas a la derecha y 7 celdas hacia abajo desde donde
+    inicia el cabezal. */
+
+    IrAntenaIzquierda()
+    DibujarAntenaIzquierda()
+    IrAntenaDerecha()
+    DibujarAntenaDerecha()
+    IrAlaDerecha()
+    DibujarAlaDerecha()
+    IrACuerpo()
+    DibujarCuerpo()
+    IrACola()
+    DibujarCola()
+}
+
+
+programa {
+
+    /* Proposito: Dibujar un insecto. Sus dos antenas y alas, serán de color rojo. El cuerpo será verde y la cola negra.
+    Precondicion: Debe existir, al menos 4 celdas hacia arriba, 4 celdas a la derecha y 7 celdas hacia abajo desde donde
+    inicia el cabezal. */
+
+
+        DibujarInsecto()
+
+}
+
+
+
+
+
+

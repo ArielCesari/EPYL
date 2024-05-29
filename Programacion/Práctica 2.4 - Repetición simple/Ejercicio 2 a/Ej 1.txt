@@ -1,0 +1,144 @@
+/* Ejercicio 2 Práctica 2.4 - Repetición simple */
+
+procedimiento DibujarRey(){
+    /* Proposito: Dibujar un rey con sus columnas laterales y la base. Todo el dibujo debe ser de color negro. El Cabezal inicia
+    a la izquierda del extremo izqueirdo de la corona y finaliza  3 celdas hacia abajo.
+    Precondicion: Debe existir al menos 4 celdas hacia la derecha  y 4 celdas hacia abajo desde donde inicia el cabezal */ 
+
+    IrACorona()
+    DibujarCorona()
+    IrACuerpo()
+    DibujarCuerpo()
+    IrATorreIzquierda()
+    DibujarTorreIzquierda()
+    IrATorreDerecha()
+    DibujarTorreDerecha()
+    IrABase()
+    DibujarBase()
+
+}
+
+procedimiento DibujarLineaNegra(){
+    /* Proposito: Dibujar una linea negra  vertical de dos celdas. El Cabezal inicia en la parte superior  finaliza una celda hacia abajo.
+    Precondicion: Debe existir al menos una celda hacia abajo desde donde inicia el cabezal */ 
+
+    PintarNegro
+    MoverAbajo
+    PintarNegro
+
+
+}
+
+
+procedimiento IrACorona(){
+    /* Proposito: Mover el cabezal a la posicion necesaria para comenzar a dibujar la corona de un rey . El cabezal inicia a la izquierda 
+    del extremo inferior izquierdo de la corona. Finaliza 2 celdas a la derecha y una hacia arriba.
+    Precondicion: Debe existir al menos dos celdas a la derecha y una hacia arriba*/ 
+
+    repetir 2 veces {
+        MoverDerecha
+    }
+    MoverArriba
+
+}
+
+procedimiento DibujarCorona(){
+    /*Proposito: Dibujar una corona negra. En forma de cruz. El Cabezal inicia en la punta de la corona y finaliza en el centro de la cruz .
+    Precondicion: Debe existir al menos una celda hacia abajo , una a la izquierda y una a la derecha desde donde inicia el cabezal. */
+
+    DibujarLineaNegra()
+    MoverIzquierda
+    PintarNegro
+    repetir 2 veces {
+        MoverDerecha
+    }
+    PintarNegro
+    MoverIzquierda
+
+}
+
+procedimiento IrACuerpo(){
+    /* Proposito: Mover el cabezal a la posicion necesaria para comenzar a dibuja el cuerpo del rey.
+    El Cabezal inicia en el centro de la corona y finaliza una celda hacia abajo.
+    Precondicion: Debe existir al menos una celda hacia abajo desde donde inicia el cabelza */ 
+
+    MoverAbajo
+}
+
+procedimiento DibujarCuerpo(){
+    /* Dibujar el cuerpo del rey. El mismo será una linea vertical negra que ocupa 2 celdas. El Cabezal inicia en la parte superior y finaliza
+    una celda hacia abajo . 
+    Precondicion: Debe existir al menos una celda hacia abajo desde donde inicia el cabezal */ 
+
+    DibujarLineaNegra()
+}
+
+
+procedimiento IrATorreIzquierda() {
+    /* Proposito: Llevar el cabezal a la posicion necesaria para comenzar a dibujar una torre.
+    El Cabezal inicia en la base del cuerpo del rey. Finaliza 2 celdas a la izquierda y una hacia arriba.
+    Precondicion: Debe existir al menos dos celdas a la izquierda y una hacia arriba desde donde inicia el cabezal.
+
+    repetir 2 veces {
+        MoverIzquierda
+    }
+    MoverArriba
+}
+
+procedimiento DibujarTorreIzquierda(){
+    /* Proposito: Dibujar una linea vertical negra que representa una torre. El cabezal inicia en la parte superior y finaliza
+    una celda hacia abajo. 
+    Precondicion Debe existir al menos una celda hacia abajo desde donde inicia el cabezal
+      */
+
+
+    DibujarLineaNegra()
+}
+
+
+procedimiento IrATorreDerecha(){
+    /* Proposito: Mover el cabezal a la posicion necesaria para comenzar a dibujar la torre lado derecho. El Cabezal inicia en 
+    la parte inferior de la torre izquierda y finaliza 4 celdas a la derecha y una hacia arriba.
+    Precondicion: Debe existir al menos 4 celdas a la derecha y una hacia arriba desde donde inicia el cabezal */
+
+    repetir 4 veces {
+        MoverDerecha
+    }
+    MoverArriba
+}
+
+procedimiento DibujarTorreDerecha(){
+    /* Proposito: Dibujar una linea vertical negra que representa una torre. El cabezal inicia en la parte superior y finaliza
+    una celda hacia abajo.
+     Precondicion: Debe existir al menos una celda hacia abajo desde donde inicia el cabezal */
+
+     DibujarLineaNegra()
+
+}
+
+procedimiento IrABase(){
+    /* Proposito: Llevar el cabezal a la posicion necesaria para comenzar a dibujar una base lineal negra.
+    El Cabezal inicia en la parte inferior de la torre derecha y finaliza una celda hacia abajo y 3 celdas hacia la izquierda.
+    Precondicion: Debe existir al menos una celda hacia abajo y 4 hacia la izquierda desde donde inicia el cabezal */ 
+
+    MoverAbajo
+    repetir 4 veces {
+        MoverIzquierda
+    }
+}
+
+
+procedimiento DibujarBase(){
+    /* Proposito: Dibujar la base donde yace el rey. La misma será una linea horizontal negra que ocupa  5 celdas . El Cabezal inicia
+    en el extremo inferior izquierdo y finaliza 4 celdas hacia la derecha. 
+    Precondicion: Debe existir al menos 4 celdas hacia la derecha desde donde inicia el cabezal  */
+
+    repetir 4 veces{
+        PintarNegro
+        MoverDerecha
+    }
+}
+
+
+
+

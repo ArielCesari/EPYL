@@ -1,0 +1,266 @@
+Práctica 2.3 - Sintaxis estricta y División de tareas
+
+Ejercicio 3 
+
+Figura 8
+
+procedimiento DibujarFilaNegra(){
+    /* Proposito: Dibujar una fila horizontal negra de dos celdas . El Cabezal comienza en la celda de la izquierda y finaliza una ceda a la derecha
+    Pre condicion: debe existir al menos una celda a la derecha desde donde empieza el cabezal */ 
+
+    PintarNegro
+    MoverDerecha
+    PintarNegro
+}
+
+Figura 9 
+
+procedimiento PintarCelda() {
+    /* Proposito: Pintar una celda. El Cabezal inicia y finaliza en la celda a Pintar.
+    Precondicion: Debe existir al menos una celda */ 
+    
+    PintarNegro
+
+}
+
+Figura 4
+
+procedimiento DibujarRectanguloNegro() {
+    /* Proposito: Dibujar un rectangulo negro. El Cabeza comienza en la parte superior izquierda del rectangulo y finaliza en la parte inferior derecha del rectangulo, dos celdas a la derecha
+    Pre condincion: Debe existir al menos una celda hacia abajo y dos a la derecha desde donde inicia el cabezal*/
+
+    PintarNegro
+    MoverAbajo
+    PintarNegro
+    MoverDerecha
+    PintarNegro
+    MoverArriba
+    PintarNegro
+    MoverDerecha
+    PintarNegro
+    MoverAbajo
+    PintarNegro
+}
+
+Figura 5
+
+procedimiento DibujarColumnaNegra(){
+    /* Proposito: Dibujar una columna negra vertical que ocupe dos celdas. El Cabeza comienza en la parte superior de la columna y finaliza una celda abajo
+    Precondicion: Debe existir al menos una celda hacia abajo desde donde empieza el cabeza */
+
+    PintarNegro
+    MoverAbajo
+    PintarNegro
+
+}
+
+
+
+procedimiento IrACabeza(){
+    /* Proposito:  Mover el cabezal hacia la celda necesaria para comenzar a dibujar la cabeza del perro. 
+     El cabezal comienza en la parte inferior izquierda del tablero y  Finaliza 4 celdas hacia arriba.
+    Pre condicion: Debe existir al menos 4 celdas hacia arriba desde donde inicia el cabezal */
+
+     MoverArriba
+     MoverArriba
+     MoverArriba
+     MoverArriba
+}
+
+
+procedimiento IrAlCuerpo() {
+    /* Proposito: Mover el cabezal hacia la celda necesaria para comenzar a dibujar el cuerpo del perro.
+    El cabezal comienza en la cara del perro y finaliza una celda hacia abajo
+    Precondicion: Desde donde comienza el cabezal, debe existir al menos 1 celda hacia abajo */ 
+
+    MoverAbajo
+}
+
+procedimiento IrAPataDelantera(){
+    /* Mover el cabezal hacia la celda necesaria para comenzar a dibujar la pata delantera.
+    El cabezal inicia  en la parte inferior de la pata trasera  finaliza dos celdas a la izquierda de esta.
+    Precondicion: Desde donde comienza el cabezal debe existir al menos  2 celdas a la izquierda  */
+
+    MoverIzquierda
+    MoverIzquierda
+}
+
+procedimiento IrAPataTrasera() { 
+    /* Mover el cabezal hacia la celda necesaria para comenzar a dibujar la pata trasera.
+    El Cabezal inicia en la parte inferior derecha del cuerpo del perro y finaliza una celda hacia abajo
+    Precondicion: Debe existir al menos una celda hacia abajo desde donde comienza el Cabezal */
+
+    MoverAbajo
+}
+
+procedimiento IrACola() {
+    /*Mover el cabezal hacia la celda necesaria para comenzar a dibujar la cola del perro.
+    El Cabezal inicia en la parte inferior de la pata delantera y finaliza 4 celdas hacia arriba y dos celdas a la derecha 
+    Debe existir al menos cuatro celdas hacia arriba y dos celdas a la derecha */
+
+    MoverArriba
+    MoverArriba
+    MoverArriba
+    MoverArriba
+    MoverDerecha
+    MoverDerecha
+}
+
+
+procedimiento DibujarCabeza() {
+    /* Proposito: Dibujar cabeza del perro de color negro. El cabezal comienza en la parte izquierda de la cabeza y finaliza una celda hacia la derecha 
+    Precondicion : Debe existir al menos una celda hacia la derecha y una hacia arriba desde donde comienza el cabezal /*
+
+    IrACabeza()
+    PintarCelda()
+    MoverDerecha
+    MoverArriba
+    DibujarColumnaNegra()
+}
+
+procedimiento DibujarCuerpo() {
+   /* Proposito: Dibuja cuerpo del perro de color negro. El cabeza comienza en la esquina superior izquierda
+   del cuerpo del perro y finaliza una celda hacia abajo y dos a la derecha
+   Precondicion: Debe existir al menos una celda hacia abajo y dos a la derecha desde donde inicia el cabezal*/
+    
+    DibujarRectanguloNegro()
+
+}
+
+procedimiento DibujarPataTrasera(){
+    /* Proposito: Dibujar pata trasera del perro de color negro. El cabezal comienza en la celda superior de la pata y 
+    finaliza  en la base de la pata. 
+    Pre condicion: Desde donde comienza el cabezal, debe existir al menos una celda hacia abajo. */
+
+   
+    DibujarColumnaNegra()
+}
+
+
+procedimiento DibujarPataDelantera(){
+    /* Proposito: Dibujar pata delantera del perro de color negro. El cabezal comienza en la base de la pata delantera  finaliza y una celda hacia arriba.
+    Pre condicion: Desde donde comienza el cabezal, debe existir al menos una celda hacia arriba. */
+
+    MoverArriba
+    DibujarColumnaNegra()
+}
+
+
+procedimiento DibujarCola(){
+    /* Proposito: Dibujar la cola del Perro. El cabeza inicia y finaliza en la celda a pintar 
+    Pre condicion: Debe existir al menos una celda */ 
+    
+    PintarCelda()
+}
+
+
+programa DibujarPerro(){
+    /* Proposito: Dibujar un perro en qdraw , visto de perfil con su cabeza, patas y cola. El cabezal finaliza en la cola del perro.
+    Precondicion: Debe existir al menos 4 celdas hacia arriba  y 3 hacia la derecha desde donde empieza el cabezal. */ 
+
+    IrACabeza()
+    DibujarCabeza()
+    IrAlCuerpo()
+    DibujarCuerpo()
+    IrAPataTrasera()
+    DibujarPataTrasera()
+    IrAPataDelantera()
+    DibujarPataDelantera()
+    IrACola()
+    DibujarCola()
+
+}
+
+Ejercicio 3.2 
+
+procedimiento IrACabeza2(){
+    /* Proposito:  Mover el cabezal hacia la celda necesaria para comenzar a dibujar la cabeza del perro. 
+     El cabezal  Finaliza 3 celdas hacia arriba desde el inicio.
+    Pre condicion: Debe existir al menos 3 celdas hacia arriba  desde donde inicia el cabezal */
+
+     MoverArriba
+     MoverArriba
+     MoverArriba
+    
+}
+
+
+
+
+
+procedimiento IrACola2() {
+    /* Proposito: Mover el cabezal hacia la celda necesaria para comenzar a dibujar la cola del perro.
+    El Cabezal inicia en la parte inferior  derecha  del cuerpo y finaliza  una celda hacia arriba y una a la derecha
+    Precondincion Debe existir al menos una celda  hacia arriba y una a la derecha desde  donde inicia el cabezal. */
+
+    MoverArriba
+    MoverDerecha 
+
+    
+}
+
+procedimiento IrAlPasto() {
+    /* Proposito: Mover el cabezal  hacia la posicion necesaria para comenzar a dibujar el pasto. El cabezal inicia en la cola del perro 
+    y finaliza dos celdas hacia abajo y una a la derecha 
+    Precondicion: Debe existir al menos dos cedas hacia abajo y una a derecha desde donde inicia el cabelza */
+    
+    MoverAbajo
+    MoverAbajo
+    MoverDerecha
+   
+
+}
+
+
+procedimiento DibujarPasto() {
+
+/* Proposito: Dibujar una linea  horizonta que ocupe siete celdas y sea de color verde. La misma representa
+el pasto donde se encotrará parado un perro. El Cabezal inicia en el extremo derecho y finaliza en el extremo izquierdo de la linea
+horizontal, 6 celdas a la izquierda. 
+Pre condicion: Debe existir al menos 6 celdas a la izquierda desde donde inicia el cabezal 
+
+PintarVerde
+MoverIzquierda
+PintarVerde
+MoverIzquierda
+PintarVerde
+MoverIzquierda
+PintarVerde
+MoverIzquierda
+PintarVerde
+MoverIzquierda
+PintarVerde
+MoverIzquierda
+PintarVerde
+
+}
+
+procedimiento DibujarPerro(){
+    /* Proposito: Dibujar un perro en qdraw , visto de perfil con su cabeza,  y cola. Parado sobre y pasto verde 
+    El cabezal inicia una celda a la derecha del extremo izquierdo del del pasto y  finaliza en el extremo izquierdo del pasto.
+    Precondicion: Debe existir al menos 4 celdas hacia arriba, 5 celdas  hacia la derecha y una celda a la izquierda 
+    desde donde empieza el cabezal. */ 
+
+    IrACabeza2()
+    DibujarCabeza()
+    IrAlCuerpo()
+    DibujarCuerpo()
+    IrACola2()
+    DibujarCola()
+    IrAlPasto()
+    DibujarPasto()
+
+}
+
+programa {
+    /* Proposito: Dibujar un perro en qdraw , visto de perfil con su cabeza,  y cola. Parado sobre y pasto verde 
+    El cabezal inicia una celda a la derecha del extremo izquierdo del del pasto y  finaliza en el extremo izquierdo del pasto.
+    Precondicion: Debe existir al menos 4 celdas hacia arriba, 5 celdas  hacia la derecha y una celda a la izquierda 
+    desde donde empieza el cabezal. */ 
+
+    DibujarPerro()
+
+
+}
+
+

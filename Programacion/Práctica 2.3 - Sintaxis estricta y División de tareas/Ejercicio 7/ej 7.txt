@@ -1,0 +1,73 @@
+a- procedimiento DibujarLetraL(){
+     /* Proposito: Dibujar una Letra L de color Rojo. El cabezal finaliza dos celdas a la derecha.
+     desde el inicio. 
+     Precondicion: Debe existir al menos 2 celdas a la derecha y 3 celdas arriba desde donde inicia 
+     el cabezal */
+
+  PintarRojo
+  MoverArriba
+  PintarRojo
+  MoverArriba
+  PintarRojo
+  MoverArriba
+  PintarRojo
+  MoverAbajo
+  MoverAbajo
+  MoverAbajo
+  MoverDerecha
+  PintarRojo
+  MoverDerecha
+  PintarRojo
+}
+
+
+b-  procedimiento DibujarTanqueGuerra(){
+/* Proposito: Dibujar un tanque de guerra verde visto desde arriba. El cabezal inicia en el extremo inferior del tanque y finaliza
+una celda hacia arriba y una a la derecha. 
+Precondicion: Debe existir al menos una celda a la derecha, una celda a la izquierda y 4 celdas hacia arriba desde donde inicia el cabezal  */
+
+
+PintarVerde
+MoverIzquierda
+MoverArriba
+PintarVerde
+MoverArriba
+PintarVerde
+MoverArriba
+PintarVerde
+MoverArriba
+MoverDerecha
+PintarVerde
+MoverDerecha
+MoverAbajo
+PintarVerde
+MoverAbajo
+PintarVerde
+MoverAbajo
+PintarVerde
+}
+
+
+c procedimiento DibjarLetraC(){
+/*Proposito: Dibujar una letra C de casa de color negra. El Cabezal inicia  y finaliza en  el extremo superior derecho de la letra.
+Precondicion: Debe existir al menos 2 celdas a la izquierda y 3  celdas hacia abajo desde donde inicia y finaliza el cabezal  */
+PintarNegro
+
+MoverIzquierda
+PintarNegro
+MoverIzquierda
+PintarNegro
+MoverAbajo
+PintarNegro
+MoverAbajo
+PintarNegro
+MoverAbajo
+PintarNegro
+MoverDerecha
+PintarNegro
+MoverDerecha
+PintarNegro
+MoverArriba
+MoverArriba
+MoverArriba
+}

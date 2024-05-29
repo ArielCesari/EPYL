@@ -1,0 +1,84 @@
+
+procedimiento MarcarSemaforo(){
+    /*Proposito: Marcar un semaforo con sus respectivos colores. El Cabezal inicia en el extremo inferior del mismo y 
+    finaliza 9 celdas hacia arriba.
+    Precondicion: Debe existir al menos 9 celdas hacia arriba desde el inicio del cabezal*/
+
+    PintarSemaforoVerde()
+    PintarSemaforoAmarrillo()
+    PintarSemaforoRojo()
+}
+
+procedimiento PintarSemaforoVerde(){
+    /* Proposito: Pintar semaforo de color verde. El cabezal inicia una celda hacia abajo de  la base inferior del semaforo y finaliza una celda
+    hacia arriba del extremo superior del mismo.
+    Precondicion: Debe existir al menos 4 celdas hacia arriba desde donde inicia el cabezal */
+
+    repetir 3 veces {
+        MoverArriba
+        PintarVerde
+    }
+    MoverArriba
+}
+
+procedimiento PintarSemaforoAmarrillo(){
+    /* Proposito: Pintar semaforo de color negro. El cabezal inicia en la base inferior del semaforo y finaliza una celda
+    hacia arriba del extremo superior del mismo.
+    Precondicion: Debe existir al menos 3 celdas hacia arriba desde donde inicia el cabezal */
+
+    repetir 3 veces {
+        PintarNegro
+        MoverArriba
+    }
+}
+
+procedimiento PintarSemaforoRojo(){
+    /*Proposito: Pintar semaforo de color rojo. El Cabelza inicia en la base inferior del semaforo y finaliza en el extremo superior del
+    mismo.
+    Precondicion: Debe existir al menos dos celdas hacia arriba desde donde inicia el cabezal */ 
+
+    repetir 2 veces {
+        PintarRojo 
+        MoverArriba
+    }
+    PintarRojo
+}
+
+procedimiento MarcarAreaConSemaforos(){
+    /* Proposito: Marcar area con 3 semaforos pintados de 3 colores. 
+    El Cabezal inicia una celda hacia abajo de la base del semaforo mas a la izquierda
+    y finaliza en el extremo superior del semaforo mas a la derecha 
+    Precondicion: Debe existir al menos 9 celdas hacia arriba y 10 celdas a la derecha desde donde inicia el cabezal */ 
+
+
+    repetir 2 veces {
+    MarcarSemaforo()
+    MoverHaciaLaDerecha()
+    MoverHaciaAbajo()
+   
+}
+
+    MarcarSemaforo()
+
+
+}
+
+procedimiento IrASiguienteSemaforo(){
+    /* Proposito: Mover el cabezal hacia la derecha para pasar a la siguiente area a fin de marcar un nuevo
+    semaforo. El Cabelza inicia en la parte superior del semaforo y finaliza 5 celdas a la derecha.
+    Precondicion: Debe existir al menos 5 celdas a la derecha desde donde inicia el cabezal */
+
+    repetir 5 veces {
+        MoverDerecha
+    }
+}
+
+procedimiento MoverHaciaAbajo(){
+    /* Proposito: Mover el cabezal hacia la abajo para comenzar a marcar el siguiente semaforo. El Cabezal inicia
+    5 celdas a la derecha del semaforo anterior y finaliza 9 celdas hacia abajo.
+    Precondicion: Debe existir al menos 9 celdas hacia abajo desde donde inicia el cabezal */
+
+    repetir 9 veces {
+        MoverAbajo
+    }
+}

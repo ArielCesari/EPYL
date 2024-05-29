@@ -1,0 +1,27 @@
+
+procedimiento MarcarCaminoConFeromonas(){
+    /* Proposito: Marcar el camino con feromonas rojas que va dejando una hormiga en la tierra hasta llegar al hormiguero.
+    El cabezal inicia  y finaliza en el extremo sur del camino. 
+    Precondicion: Debe haber el espacio suficiente para que la hormiga pueda marcar el camino 7 veces partiendo del inicio 
+    hasta llegar al hormiguero.  */
+
+    repetir 6 veces {
+        PintarRojo
+        MoverArriba
+    }
+    PintarRojo
+    MoverCabezalHaciaElSur()
+ 
+}
+
+
+
+procedimiento MoverCabezalHaciaElSur(){
+    /* Proposito: Llevar el cabezal hacia el inico  sur del camino. El Cabezal inicia en la puerta del hormiguero y finaliza en el 
+    extremo sur del mismo.
+    Precondicion: Debe haber el espacio suficiente para mover el cabezal 6 veces haca abajo desde el inicio. */
+
+    repetir 6 veces{
+        MoverAbajo
+    }
+}
