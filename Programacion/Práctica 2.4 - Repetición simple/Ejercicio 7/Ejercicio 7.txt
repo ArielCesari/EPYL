@@ -1,1 +1,35 @@
 /* Ejercicio 7 */ 
+
+procedimiento ComerLasEstrellasDeUnaFila(){
+    /* Proposito: El tiburon Jose come todas las estrellas de una fila. Las estrellas en la fila son 4.  
+    Jose finaliza su recorrido por el mar al final de la Fila. 
+    Precondicion: Jose debe estar en el inicio de la fila y deben existir tanto 4 estrellas de mar hacia adelante como espacio para
+    que pueda moverse en esa direccion. */
+
+    repetir 3 veces {
+        ComerEstrella
+        AvanzarTiburon
+    }
+}
+
+
+procedimiento ComerTodasLasEstrellas(){
+    /*Proposito: Jose come las 16 estrellas del mar. Jose comienza en un punto del mar, finaliza su recorrido al final de la 
+    fila superior de estrellas.
+    Precondicion. Deben existir 4 filas de estrellas en la cual haya 4 estrellas en cada fila. El Total de estrellas en el mar
+    deben ser 16*.  */ 
+
+    ComenzarRecorrido
+
+    repetir 3 veces {
+        ComerLasEstrellasDeUnaFila()
+        IrAProximaFila
+
+    }
+
+    ComerLasEstrellasDeUnaFila()
+    
+
+
+}
+
