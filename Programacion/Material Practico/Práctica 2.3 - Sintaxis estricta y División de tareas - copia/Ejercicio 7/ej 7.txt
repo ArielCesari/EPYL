@@ -1,4 +1,8 @@
-a- procedimiento DibujarLetraL(){
+a-  Analizar el código y simular su ejecución agregando la imagen del dibujo resultante.
+Luego, completar el procedimiento con un nombre adecuado y con su
+documentación
+
+ procedimiento DibujarLetraL(){
      /* Proposito: Dibujar una Letra L de color Rojo. El cabezal finaliza dos celdas a la derecha.
      desde el inicio. 
      Precondicion: Debe existir al menos 2 celdas a la derecha y 3 celdas arriba desde donde inicia 
@@ -21,8 +25,8 @@ a- procedimiento DibujarLetraL(){
 }
 
 
-b-  procedimiento DibujarTanqueGuerra(){
-/* Proposito: Dibujar un tanque de guerra verde visto desde arriba. El cabezal inicia en el extremo inferior del tanque y finaliza
+b-  procedimiento DibujarLetraO (){
+/* Proposito: Dibujar la letra O El cabezal inicia en el extremo inferior de la letra y finaliza
 una celda hacia arriba y una a la derecha. 
 Precondicion: Debe existir al menos una celda a la derecha, una celda a la izquierda y 4 celdas hacia arriba desde donde inicia el cabezal  */
 
@@ -71,3 +75,8 @@ MoverArriba
 MoverArriba
 MoverArriba
 }
+
+
+b-  Mejorar el código de cada procedimiento, descomponiéndose en otros
+procedimientos que realice el mismo dibujo, es decir definir todos los procedimientos
+e invocarlos donde corresponde sin alterar el propósito.

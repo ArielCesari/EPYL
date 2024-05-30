@@ -1,0 +1,18 @@
+/* Ejercicio 5 */ 
+
+procedimiento AlmorzarBananas(){
+    /* Proposito: Guiar al mono Loreto hasta el final del camino para que pueda llegar y comer las bananas que alli se encuentran.
+    Loreto empieza fuera del camino y finaliza al final del mismo. En la esquina derecha.
+    Precondicion: Desde el inicio del camino, es decir la esquina
+    inferior inzquierda,  debe existir al menos 5 espacios en el camino por los cuales Loreto podra avanzar.
+    Deben existir Bananas al final del camino para que Loreto pueda comerlas al llegar. Las mismas desapareceran del 
+    camino si es que Loreto se las come. */
+
+    Comenzar
+    repetir 5 veces {
+        AvanzarLoreto
+    }
+    ComerBananas
+
+
+}>

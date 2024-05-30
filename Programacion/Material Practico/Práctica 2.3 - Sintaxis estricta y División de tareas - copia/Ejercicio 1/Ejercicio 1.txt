@@ -1,0 +1,17 @@
+Ejercicio 1:
+Completar el siguiente párrafo con las palabras correspondientes en base al listado dado:
+"Uno de los conceptos esenciales es la DESCOMPOSICION, y en QDraw se puede llevar a cabo
+mediante PROCEDIMIENTOS, ya que es una manera de DIVIDIR el problema en porciones
+más pequeñas. Recordar que como parte de la GENERALIZACION, se deberá agregar su
+correspondiente DOCUMENTACION, dado que, si necesitaramos conocer qué porción del
+problema estamos resolviendo, será necesario leer el PROPOSITO. Por otra parte, al
+ejecutar el PROGRAMA , para asegurarnos que el mismo INICIE exitosamente,
+debemos tener en cuenta sus PRECONDICIONES ; ya que en caso contrario corremos el
+riesgo de que FALLE. Para finalizar, recordemos la importancia de PROBAR(EVALUAR)
+siempre nuestro código (otro concepto esencial) y tener en cuenta que debe existir una
+coherencia entre el ALGORITMO y su DOCUMENTACION "
+
+Del siguiente listado solo utilice las que necesite:
+Documentación (x2), falle, procedimientos, descomposición, finalice, propósito,
+precondiciones, dividir, algoritmo, generalización, definición, programa, inicie,
+probar(evaluar)

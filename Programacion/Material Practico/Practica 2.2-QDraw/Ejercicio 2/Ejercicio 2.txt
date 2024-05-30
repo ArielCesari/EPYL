@@ -1,0 +1,78 @@
+/* Ejercicio 2
+a. Utilizando QDraw, escribir un programa, con su correspondiente documentación, que
+dibuje la silla que se muestra en la imagen. El cabezal se encuentra en la parte
+inferior de la pata delantera de la silla.*
+
+programa {
+    /* Proposito: Dibujar una silla negra vista de perfil con su respectivo asiento, respaldo, pata trasera y delantera.
+    El Cabezal inicia en la parte inferior de la pata delantera y finaliza en la parte inferior de la pata trasera 
+    Precondicion: Debe existir al menos 5 celdas hacia arriba y 3 celdas a la izquierda desde donde inicia el cabezal */
+
+    PintarNegro
+    MoverArriba
+    PintarNegro
+    MoverArriba
+    PintarNegro
+    MoverIzquierda
+    PintarNegro
+    MoverIzquierda
+    PintarNegro
+    MoverIzquierda
+    PintarNegro
+    MoverArriba
+    PintarNegro
+    MoverArriba
+    PintarNegro
+    MoverArriba
+    PintarNegro
+    MoverAbajo
+    MoverAbajo
+    MoverAbajo
+    MoverAbajo
+    PintarNegro
+    MoverAbajo
+    PintarNegro
+
+}
+
+/* b. Si tuviéramos la siguiente imagen con el cabezal iniciando en otra celda. ¿Qué
+cambiaría?
+
+- Cambiara el proposito y la precondicion. Porque el cabezal inicia
+y finaliza en otra celda. Ademas, se necesitara cambiar la precondicion para que el programa
+no falle. Por ultimo, teniendo en cuenta estos dos factores, el codigo
+tambien cambiara, debido a que el desplazamiento del cabezal será hacia otra
+direccion.
+ */
+
+programa {
+    /* Proposito: Dibujar una silla negra vista de perfil con su respectivo asiento, respaldo, pata trasera y delantera.
+    El Cabezal inicia en la parte inferior de la pata trasera y finaliza en la parte inferior de la pata delantera 
+    Precondicion: Debe existir al menos 5 celdas hacia arriba y 3 celdas a la derecha desde donde inicia el cabezal */
+
+    PintarNegro
+    MoverArriba
+    PintarNegro
+    MoverArriba
+    PintarNegro
+    MoverArriba
+    PintarNegro
+    MoverArriba
+    PintarNegro
+    MoverArriba
+    PintarNegro
+    MoverAbajo
+    MoverAbajo
+    MoverAbajo
+    MoverDerecha
+    PintarNegro
+    MoverDerecha
+    PintarNegro
+    MoverDerecha
+    PintarNegro
+    MoverAbajo
+    PintarNegro
+    MoverAbajo
+    PintarNegro
+
+}

@@ -1,0 +1,64 @@
+/* Ejercicio 6 */ 
+
+procedimiento DespegarACasa(){
+    /*Proposito: Ayudar al Robot Alfredo a llegar a su nave, subir a la misma para luego poder partir a su casa.
+    El Robot se encuentra Al principio del camino, en la parte inferior izquierda del mismo. Finaliza 3 pasos en el camino
+    hacia la derecha y 3 pasos en el camino hacia arriba. 
+    Precondicion: Desde donde Alfredo inicia su recorrido, debe poder dar 3 pasos en el camino hacia la derecha y 3 
+    pasos hacia arriba. Debe existir una nave al final del camino para que el robot pueda subirse y despegar. La primitiva GirarRobot, gira a 
+    Alberto hacia la izquierda. Es decir, si se aplica 4 veces consecutivas, el robot da un giro de 360 grados.   */
+
+    MoverAlRobotTresPasos()
+    GirarRobot
+    MoverAlRobotTresPasos()
+
+    repetir 4 veces {
+        GirarRobot
+    }
+
+    SubirANave
+    Despegar
+
+}
+
+
+procedimiento MoverAlRobotTresPasos(){
+    /* Proposito: Mover al robot tres pasos . Finaliza 3 pasos hacia la de derecha desde la posicion en la cual se encuentra parado
+    el robot. 
+    Precondicion: Debe existir al menos 3 pasos disponibles en el camino para que el robot pueda avanzar */ 
+
+     repetir 3 veces{
+        MoverRobot
+    }
+}
+
+
+Duda - ¿Esto Seria correcto? 
+
+
+procedimiento DespegarACasa(){
+    /*Proposito: Ayudar al Robot Alfredo a llegar a su nave, subir a la misma para luego poder partir a su casa.
+    El Robot se encuentra Al principio del camino, en la parte inferior izquierda del mismo. Finaliza 3 pasos en el camino
+    hacia la derecha y 3 pasos en el camino hacia arriba. 
+    Precondicion: Desde donde Alfredo inicia su recorrido, debe poder dar 3 pasos en el camino hacia la derecha y 3 
+    pasos hacia arriba. Debe existir una nave al final del camino para que el robot pueda subirse y despegar. La primitiva GirarRobot, gira a 
+    Alberto hacia la izquierda. Es decir, si se aplica 4 veces consecutivas, el robot da un giro de 360 grados.   */
+
+      repetir 3 veces{
+        MoverRobot
+    }
+
+    GirarRobot
+
+       repetir 3 veces{
+        MoverRobot
+    }
+
+    repetir 4 veces {
+        GirarRobot
+    }
+
+    SubirANave
+    Despegar
+
+}

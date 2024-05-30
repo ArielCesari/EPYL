@@ -1,0 +1,191 @@
+Ejercicio 2
+Utilizando QDraw, escribir un procedimiento, junto con su documentación, para cada una
+de las figuras que se muestran a continuación (uno por figura):
+Nota: poner especial atención al nombre del procedimiento, el mismo debe ser
+representativo de la figura que se está dibujando.
+
+
+
+
+/* Figura 1 */
+
+procedimiento DibujarLineaVerticualDeCuatroCeldas(){
+    /* Proposito: Dibujar una  linea Vertical negra  que presenta una  columna  que 
+    ocupe cuatro celdas. El cabezal inicia en la parte superior y finaliza en la base. 
+    Precondicion: Debe existir al menos tres celdas hacia abajo desde donde inicia
+    cabezal */ 
+
+    PintarNegro
+    MoverAbajo
+    PintarNegro
+    MoverAbajo
+    PintarNegro
+    MoverAbajo
+    PintarNegro
+}
+
+
+/* Figura 3 */ 
+
+procedimiento DibujarLineaHorizontalDeSieteCeldas(){
+    /*Proposito: Dibujar una linea horizontal negra que respresenta una fila que
+    ocupe 7 celdas. El cabeza inicia en el comienzo de la fila y finaliza 6 celdas
+    a la derecha.
+    Precondicion: Debe existir al menos 6 celdas a la derecha desde donde inicia 
+    el cabezal
+    
+    PintarNegro
+    MoverDerecha 
+    PintarNegro
+    MoverDerecha 
+    PintarNegro
+    MoverDerecha 
+    PintarNegro
+    MoverDerecha 
+    PintarNegro
+    MoverDerecha 
+    PintarNegro
+    MoverDerecha 
+    PintarNegro
+
+
+}
+
+
+Figura 4
+
+procedimiento DibujarRectanguloNegro() {
+    /* Proposito: Dibujar un rectangulo negro. El Cabeza comienza en la parte superior izquierda del rectangulo y finaliza en la parte inferior derecha del rectangulo, dos celdas a la derecha
+    Pre condincion: Debe existir al menos una celda hacia abajo y dos a la derecha desde donde inicia el cabezal*/
+
+    PintarNegro
+    MoverAbajo
+    PintarNegro
+    MoverDerecha
+    PintarNegro
+    MoverArriba
+    PintarNegro
+    MoverDerecha
+    PintarNegro
+    MoverAbajo
+    PintarNegro
+}
+
+Figura 5
+
+procedimiento DibujarColumnaNegra(){
+    /* Proposito: Dibujar una columna negra vertical que ocupe dos celdas. El Cabeza comienza en la parte superior de la columna y finaliza una celda abajo
+    Precondicion: Debe existir al menos una celda hacia abajo desde donde empieza el cabeza */
+
+    PintarNegro
+    MoverAbajo
+    PintarNegro
+
+}
+
+/* Figura 6 */ 
+
+procedimiento DibujaLineaDiagonalDeCuatroCeldas() {
+    /* Proposito: Dibujar una linea diagonal roja de 4 celdas. El cabezal  inicia
+    en la parte inferior de la linea y finaliza 3 celdas hacia arriba y 3 celdas a 
+    la derecha del inicio. 
+    Pre condicion: Debe existir, por lo menos, 3 cedas hacia arriba y 3 a la derecha
+    desde donde inicia el cabezal */ 
+    
+    PintarRojo
+    MoverDerecha
+    MoverArriba
+    PintarRojo
+    MoverDerecha
+    MoverArriba
+    PintarRojo
+    MoverDerecha
+    MoverArriba
+    PintarRojo
+
+}
+
+/* Figura 7 */
+
+procedimiento DibujaLineaDiagonalDeTresCeldas() {
+    /* Proposito: Dibujar una linea diagonal roja de 3 celdas. El cabezal inicia
+    en la parte superior de la linea y  finaliza 2 celdas hacia abajo  y 2 celdas
+    a la derecha.
+    Pre condicion: Debe existir, por lo menos, 2 celdas hacia abajo y dos hacia la
+    derecha desde donde incia el cabeza */ 
+
+    PintarRojo
+    MoverAbajo
+    MoverDerecha
+    PintarRojo
+    MoverAbajo
+    MoverDerecha
+    PintarRojo
+
+}
+
+
+Figura 8
+
+procedimiento DibujarFilaNegra(){
+    /* Proposito: Dibujar una fila horizontal negra de dos celdas . El Cabezal comienza en la celda de la izquierda y finaliza una ceda a la derecha
+    Pre condicion: debe existir al menos una celda a la derecha desde donde empieza el cabezal */ 
+
+    PintarNegro
+    MoverDerecha
+    PintarNegro
+}
+
+Figura 9 
+
+procedimiento PintarCelda() {
+    /* Proposito: Pintar una celda. El Cabezal inicia y finaliza en la celda a Pintar.
+    Precondicion: Debe existir al menos una celda */ 
+    
+    PintarNegro
+
+}
+
+/* Figura 10 */ 
+
+procedimiento DibujarCuadradoRojo(){
+
+    /* Proposito: Dibujar un cuadrado rojo de 2x2. El cabezal inicia en la parte inferior izquierda y finaliza
+    en la parte inferior derecha.
+    Precondicion: Debe existir al menos 1 celda hacia arriba  y una a la derecha desde donde inicia el cabezal */
+
+    PintarRojo
+    MoverArriba
+    PintarRojo
+    MoverDerecha
+    PintarRojo
+    MoverAbajo
+    PintarRojo
+}
+
+/* Figura 11 */
+
+procedimiento DibujarLineaVerticalVerde(){
+    /* Proposito: Dibujar una linea vertical verde que ocupe 7 celdas. El Cabezal inicia en el extremo superior
+    De la linea y finaliza 6 celdas hacia abajo. 
+    Precondicion: Debe existir al menos 6 celdas hacia abajo desde donde inicia el cabezal */
+
+    PintarVerde
+    MoverAbajo
+    PintarVerde
+    MoverAbajo
+    PintarVerde
+    MoverAbajo
+    PintarVerde
+    MoverAbajo
+    PintarVerde
+    MoverAbajo
+    PintarVerde
+    MoverAbajo
+    PintarVerde
+   
+}
+
+
+
+

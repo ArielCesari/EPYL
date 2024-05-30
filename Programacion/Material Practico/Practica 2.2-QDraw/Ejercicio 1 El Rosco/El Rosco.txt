@@ -1,0 +1,49 @@
+Aquí las palabras a completar para cada letra:
+A: (comienza con). Primera etapa que debe realizar quien programa.
+Respuesta: Analizar
+B: (contiene). Resultado que se obtiene al ejecutar un programa utilizando las primitivas de
+QDraw
+Respuesta: Dibujo
+C: (comienza con). Acción que se realiza al programar y crear la documentación de un
+programa. Forma parte de las buenas prácticas de programación.
+Respuesta: Comunicar
+D: (comienza con). Forma específica de comunicar un programa que acompaña su código
+fuente.
+Respuesta: Documentar
+E: (comienza con). Situación que se genera cuando un programa no cumple con lo
+especificado. Puede haber de 2 tipos.
+Respuesta: Error
+G: (contiene). Secuencia de pasos ordenados con un objetivo puntual.
+Respuesta: Algoritmo
+I: (comienza con). Orden que se le da a un autómata mediante el lenguaje QDraw.
+Respuesta: Instruccion
+J: (contiene). Acción que se realiza sobre el código fuente de un programa con el objetivo
+de obtener un resultado.
+Respuesta: Ejecucion
+L: (comienza con). Conjunto de sintaxis y reglas para comunicar.
+Respuesta:Generalizacion
+M: (contiene). Algoritmo ejecutable por un autómata.
+Respuesta:  programa
+N: (contiene). Concepto esencial de programación que permite clasificar información en
+base a patrones.
+Respuesta: Generalizacion
+O: (contiene). Computadora capaz de ejecutar programas.
+Respuesta: Automata
+P: (comienza con). Información necesaria, descrita en la documentación, que se debe
+considerar antes de la ejecución de un programa para evitar errores.
+Respuesta: Precondicion
+Q: (contiene). Nombre utilizado para referenciar la secuencia ordenada de instrucciones
+que conforman un programa.
+Respuesta: Bloque
+R: (contiene). Objetivo principal del programa detallado en la documentación.
+Respuesta: Proposito
+S: (comienza con). Reglas correspondientes a un lenguaje, que se utilizan para escribir el
+código de un programa.
+Respuesta: sintaxis
+T: (comienza con). Herramienta que utiliza QDraw para que el cabezal se pueda desplazar.
+Respuesta: Tablero
+V: (contiene). Concepto esencial de programación que se corresponde con la etapa final
+que debe realizar el/la programadora para verificar su programa.
+Respuesta: Evaluar
+Z: (contiene). Herramienta que utiliza QDraw para desplazarse y dibujar sobre el tablero.
+Respuesta: Cabezal

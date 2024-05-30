@@ -1,0 +1,40 @@
+/*Ejercicio 3
+Utilizando QDraw, escribir un programa, con su correspondiente documentación, que dibuje
+la flecha que se muestra en la imagen. El cabezal inicia en el centro */
+
+programa {
+    /* Proposito: Dibujar una flecha diagonal apuntando hacia el suroeste. La misma
+    debe ser roja en la cola, negra en el centro y verde en la punta. El Cabezal inicia en 
+    el centro de la flecha y finaliza en el mismo lugar.
+    Precondicion: Debe existir al menos 2 celdas a la derecha, 2 celdas hacia abajo
+    2 celdas hacia la izquierda y 2 celdas hacia arriba desde donde inicia el cabezal*/
+
+    PintarNegro
+    MoverDerecha
+    MoverAbajo
+    PintarNegro
+    MoverDerecha
+    PintarVerde
+    MoverArriba
+    PintarVerde
+    MoverAbajo
+    MoverAbajo
+    PintarVerde
+    Moverizquierda
+    PintarVerde
+    Moverizquierda
+    PintarVerde
+    MoverArriba
+    MoverArriba
+    Moverizquierda
+    MoverArriba
+    PintarNegro
+    Moverizquierda
+    PintarRojo
+    MoverArriba
+    MoverDerecha
+    PintarRojo
+    MoverDerecha
+    MoverAbajo
+    MoverAbajo
+}
