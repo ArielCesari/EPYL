@@ -24,6 +24,20 @@ procedimiento DibujarLineaVerticualDeCuatroCeldas(){
     PintarNegro
 }
 
+/* Figura 1 */
+
+procedimiento PintarFilaRoja(){
+    /* Proposito: Dibujar una  linea horizontal roja que
+    ocupe dos celdas El cabezal inicia en el extremo izquierdo y finaliza una celda a la derecha. 
+    Precondicion: Debe existir al menos 1 celda a la derecha desde el inicio del cabezal */ 
+    
+    PintarRojo
+    MoverDerecha
+    PintarRojos
+
+}
+
+
 
 /* Figura 3 */ 
 
