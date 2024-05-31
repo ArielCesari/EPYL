@@ -1,0 +1,126 @@
+/* Ejercicio 2 */ 
+
+procedimiento DibujarCuadradoOCruz(){
+    /*Dibujar un cuadrado o cruz dependiendo del color del centro de la figura.En caso que este coloreado de rojo, 
+    debe dibujar un cudrado de 3x3 de color verde centrado, caso contrario
+     debe dibujar una cruz de 3x3 de color negro tambien centrado. El cabezal inicia en la celda central del cuadrado.
+     Precondicion: Debe existir una celda hacia arriba, una hacia la derecha, una hacia abajo y una hacia la izquierda de donde inicia el cabezal. */
+
+     si (estaPintadaDeRojo?) entonces {
+        DibujarCuadradoVerde()  
+     }  sino {
+        DibujarCruzNegra()
+     }
+}
+
+
+procedimiento DibujarCuadradoVerde(){
+    /* Proposito: Dibujar un cuadrado verde de 3x3 . El Cabelza inicia en la celda central y finaliza Una celda hacia arriba y 
+    una a la derecha. 
+    precondicion:  Debe existir una celda hacia arriba, una hacia la derecha, una hacia abajo y una hacia la izquierda de donde 
+    inicia el cabezal. */
+
+    IrEsquinaInferiorIzq()
+
+    repetir 2 veces {
+        DibujarFila()
+        IrASiguienteFila()
+    }
+
+    DibujarFila()
+}
+
+procedimiento IrEsquinaInferiorIzq() {
+    /* Proposito: Mover el cabezal a la esquina inferior izquierda dentro de un tablero de 3x3. El Cabezal inicia en la celda central
+    Y finaliza una celda hacia abajo y una a la izquierda. 
+    Precondicion: Debe existir al menos una celda hacia abajo y una a la izquierda desde dondi inicia el cabezal */ 
+
+    MoverAbajo
+    MoverIzquierda
+}
+
+procedimiento DibujarFila() {
+    /* Proposito: Dibujar una fila horizontal verde de 3 celdas. El Cabezal inicia en el extremo inferior izquierdo y termina dos celdas hacia la 
+    derecha. 
+    Precondicion: deben existir dos celdas hacia la derecha desde donde inicia el cabezal. */
+
+    repetir 2 veces {
+        PintarVerde
+        MoverDerecha 
+    }
+    PintarVerde
+}
+
+procedimiento IrASiguienteFila(){
+    /* Proposito: Mover el cabeza a la siguiente fila. Dentro de un tablero de 3x3, el cabezak inicia en el extremo inferior derecho y una celda
+    hacia arriba y dos a la izquierda. */ 
+
+    MoverArriba
+    repetir 2 veces {
+        MoverIzquierda
+    }
+}
+
+
+procedimiento   DibujarCruzNegra() {
+    /* Proposito: Dibujar una cruz negra  de 3x3 dentro de un cuadrado de 5x5  . El Cabezal inicia en la celda central del cuadrado
+    Precondicion. Deben existir  una celda hacia arriba, 
+    una hacia la derecha, una hacia abajo y una hacia la izquierda de donde inicia el cabezal. */
+    
+    
+     LlevarCabezalAbajoIzquierda()
+     DibujarDiagonalNegraIzquiedaADerecha()
+     LLevarCabezalAbajoDerecha()
+     DibujarDiagonalNegraDerechaIzquierda()
+   
+}
+
+
+procedimiento LlevarCabezalAbajoIzquierda(){
+    /* Proposito: Llevar el cabezal hacia la posicion necesaria para  comenzar a dibujar una linea diagonal que ocupe 3 celdas, dentro de un
+    tablero de 3x3. El Cabezal inicia en el centro del tablero y finaliza una celda hacia abajo y una a la izquierda 
+    Precondicion: Desde donde inicia el cabezal, debe existir una celda hacia abajo y una a la izquierda */
+    
+    MoverAbajo
+    MoverIzquierda
+
+}
+
+procedimiento DibujarDiagonalNegraIzquiedaADerecha(){
+    /* Proposito: Dibujar una linea diagonal negra que ocupe 3 celdas. El Cabezal inicia en la parte inferior de la linea.
+    Finzaliza dos celdas hacia arriba y dos hacia la derecha. 
+    Precondicion: Desde donde inicia el cabezal, deben existir 2 celdas hacia arriba y 2 hacia la derecha */
+
+    repetir 2 veces {
+        PintarNegro
+        MoverDerecha
+        MoverArriba
+    }
+    PintarNegro
+}
+
+procedimiento LLevarCabezalAbajoDerecha() {
+    /* Proposito: Llevar el cabezal hacia la posicion necesaria para  comenzar a dibujar una linea diagonal que ocupe 3 celdas, dentro de un
+    tablero de 3x3.El cabezal inicia en la Celda Superior derecha. Finaliza dos celdas Hacia abajo 
+    Precondicion: Desde donde inicia el cabezal, debe existir dos celdas hacia abajos*/
+
+    repetir 2 veces{
+        MoverAbajo
+    }
+}
+
+
+procedimiento DibujarDiagonalNegraDerechaIzquierda(){
+    /*Proposito: Dibujar una linea diagonal negra que ocupe 3 celdas. El Cabezal inicia en la parte superior de la linea.
+    Finzaliza dos celdas hacia abajo y dos hacia la izquierda 
+    Precondicion: Desde donde inicia el cabezal, deben existir 2 celdas hacia abajo y 2 hacia la izquieda */
+
+     repetir 2 veces {
+        PintarNegro
+        MoverIzquierda
+        MoverAbajo
+    }
+    PintarNegro
+
+
+}
