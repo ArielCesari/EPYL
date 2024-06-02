@@ -1,0 +1,65 @@
+
+procedimiento EliminarBarcosDelOceano(){
+
+    /* Proposito: Retirar del juego tanto barcos chicos como grandes, colocando porciones de agua en su lugar. El Barco comienza su
+    recorrido en la esquina inferior izquierda y finaliza en la esquina superior derecha del oceano.
+    Precondicion: El Barco debe poder moverse en  7 posiciones hacia la derecha y 7 posiciones hacia arriba*/ 
+
+    repetir 7 veces {
+
+        BuscarBarcosYEliminarPorFila()
+        IrASiguienteFila()
+    }
+    BuscarBarcosYEliminarPorFila()
+  
+
+
+}
+
+procedimiento VerificarYEliminarBarcos(){
+    /* Proposito: Verificar si hay barcos en el oceano y en caso que los haya, eliminarlos dejando en su lugar porcion de agua. */
+
+    si (estaPintadoDeVerde? v estaPintadoDeRojo?) entonces {
+
+        PintarNegro
+    }
+}
+
+
+procedimiento RecorrerOcenanoPorFila(){
+    /*Proposito: Recorrer el oceano con el barco. El recorrido comienza en la parte inferior izquierda del oceano y finaliza 7 espacios 
+    hacia la derecha .
+    Precondicion: Debe existir  7 espacios hacia la derecha desde el inicio del recorrido. */ 
+
+    MoverDerecha
+    
+}
+
+procedimiento BuscarBarcosYEliminarPorFila(){
+
+    /* Proposito: Verificar si hay barcos en una porcion de agua determinada. El recorrido comienza en el extremo
+    izquierdo del oceano y finaliza 7 celdas a la derecha
+    Precondion: Desde donde inicia el recorrido, debe haber 7 espacios hacia la derecha.   */
+
+    repetir 7 veces {
+
+        VerificarYEliminarBarcos()
+        RecorrerOcenanoPorFila ()
+    }
+
+     VerificarYEliminarBarcos()
+
+    
+}
+
+
+procedimiento IrASiguienteFila(){
+    /* Proposito: Llevar el barco al siguiente nivel. El recorrido inicia en el extremo derecho del oceano y finaliza un espacios
+    hacia arriba y 7 hacia la izquierda.
+    Precondicion: debe existir el espacio necesario para poder mover el barco una posicion hacia arriba y 7 hacia la izquierda  */
+    
+    MoverArriba
+    Repetir 7 veces {
+        MoverIzquierda
+    }
+}
