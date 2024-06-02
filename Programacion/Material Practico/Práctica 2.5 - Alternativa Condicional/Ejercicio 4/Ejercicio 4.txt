@@ -1,0 +1,73 @@
+procedimiento PolinizarJardin(){
+    /* Proposito: Ayudar a la abeja Susy a polinizar  todas las flores que va encontrando en el camino. La abeja comienza su recorrido
+    En la esquina superior derecha del camino y finaliza en la esquina inferior derecha del mismo. 
+    Precondicion: La abeja debe poder avanzar 10 espacios hacia la izquierda y derecha, y 3 hacia abajo, 
+    pero siempre comenzado desde la parte superior izquierda del camino.
+    No podra avanzar hacia abajo desde donde inicia su recorrido. Primero debe avanzar hacia la izquierda.   */
+
+    AvanzarEnElCaminoHorizontalSuperior()
+    AvanzarEnElCaminoVertical()
+    AvanzarEnElCaminoHorizontalInferior()
+}
+
+
+procedimiento RevisarFlor(){
+    /* Proposito: Revisar si la flor donde se encuentra parada la abeja, es apta para polinizar. La abeja comienza y finaliza
+    su recorrido en la flor a evaluar. */
+
+     si (estaPintadaDeRojo? v estaPintadaDeVerde?) entonces  {
+
+        PolinizarFlor()
+
+    } 
+
+
+procedimiento PolinizarFlor(){
+    /* Proposito: Que la abeja polnice la flor . Comienza y finaliza en la celda a polinizar.  */
+
+    si (¬estaVacia?) entonces  {
+        Limpiar
+    }
+}
+ 
+   
+}
+
+
+procedimiento AvanzarEnElCaminoHorizontalSuperior(){
+    /* Proposito: Lograr que la abeja avance en el camino. Comienza en el extrmo derecho y finaliza en el extrmo izquierdo.
+    Precondicion: La abeja debe pode avanzar 10 pasos a la izquierda.  */ 
+
+    repetir 10 veces  {
+
+        RevisarFlor()
+        MoverIzquierda
+
+    }
+
+   
+}
+
+procedimiento AvanzarEnElCaminoVertical(){
+    /* Proposito: Lograr que la abeja avance en el camino. Comienza en el extrmo superior y finaliza en el extremo inferior.
+    Precondicion: La abeja debe pode avanzar 4 pasos hacia abajo. */ 
+
+    repetir 3 veces {
+        RevisarFlor()
+        MoverAbajo()
+
+    }
+
+
+}
+
+procedimiento AvanzarEnElCaminoHorizontalInferior(){
+    /* Proposito: Que la abeja avance en el camino. Inicia su recorrido en el extremo izquierdo y finaliza en el extremo derecho.
+    Precondicion:  La abeja debe pode avanzar 10 pasos a la derecha*/ 
+
+    repetir 10 veces {
+        RevisarFlor()
+        MoverDerecha
+    }
+   
+}

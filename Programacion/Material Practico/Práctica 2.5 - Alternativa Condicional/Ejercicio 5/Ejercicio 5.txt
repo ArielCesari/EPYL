@@ -1,0 +1,56 @@
+/* Ejercicio 5 */ 
+
+procedimiento ComerTodasLasBananas(){
+    /* Proposito: Que el mono Jorgito se desplace por toda la casa y coma la totalidad de bananas disponibles en ella.
+    El monito comienza su recorrido en la parte inferior izquierda de la casa y lo finaliza en la parte superior derecha.
+    Precondicion: Desde donde inicia su recoorido, debe poder dar 6 pasos hacia la derecha y 4 hacia arriba */ 
+    
+    repetir 4 veces {
+       RevisarYComerBananaPorFila()
+       IrASiguienteFila()
+
+    }
+    
+    revisarYComerBananaPorFila()
+   
+}
+
+procedimiento RevisarSihayBananaParaComer() {
+    /* Proposito: Revisar si hay bananas disponibles para que el monito pueda comer.
+    El monito se encuentra en la baldoza y finaliza alli mismo. */
+
+    si (estaPintadaDeRojo?) entonces{
+        Limpiar
+        
+    } 
+}
+
+procedimiento DarUnPasoHaciaAdelante() {
+    /* Propoposito: Hacer que el monito de un paso hacia adelante.
+     Precondicion: Desde donde el monito se encuentra parado,  debe poder dar un paso hacia la derecha  */
+
+    MoverDerecha
+}
+
+procedimiento IrASiguienteFila(){
+    /* Proposito: Hacer que el monito se traslade al siguiente sector de la casa . Comienza su recorrido en la parte inferior derecha
+    de la casa y lo finaiza un paso hacia arriba y 6 hacia la izquierda
+    Precondicion: Deben existir una baldoza hacia arriba y 6 hacia la izquierda   */
+
+    MoverArriba
+    repetir 6 veces  {
+        MoverIzquierda
+    }
+}
+
+procedimiento RevisarYComerBananaPorFila() {
+/* Proposito: Revisar si hay bananas para que el mono pueda comerlas y dar un paso hacia adelante.
+Precondicion: El monito debe poder dar un paso hacia adelante */
+
+    repetir 6 veces {
+
+        RevisarSihayBananaParaComer()
+        DarUnPasoHaciaAdelante()     
+    }
+    RevisarSihayBananaParaComer()
+}

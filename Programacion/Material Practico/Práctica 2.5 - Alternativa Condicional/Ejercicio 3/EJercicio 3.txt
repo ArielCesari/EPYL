@@ -1,0 +1,52 @@
+/* Ejercicio 3 */ 
+
+procedimiento EncontrarTesoro(){
+    /* Proposito:  El pirata debe recorrer el camino marcado en el mapa hasta llegar al tesoro. El pirata se encuentra
+ubicado un paso previo al inicio del camino (extremo sureste del mismo). Y finaliza su recorrido en el extremo noreste.
+Precondicion: Debe existir un camino distribuido de manera horizontal y vertical en dos tramo. Y uno mas horizontal
+hasta llegar al final. Debe haber  tesoro al final del camino.  */ 
+
+repetir 2 veces {
+    AvanzarEnCaminoHorizontal()
+    AvanzarCaminoVertical()
+
+}
+
+AvanzarEnCaminoHorizontal()
+
+}
+
+
+procedimiento RevisarCamino(){
+    /* Proposito: Revisar en el camino si existe una muralla roja. Si a encontramos, se pinta de negro. */ 
+
+   si (estaPintadoDeRojo?) entonces {
+    PintarNegro
+   }
+} 
+
+
+procedimiento AvanzarEnCaminoHorizontal(){
+    /* Proposito: Avanzar en el camino. Se inicia un paso a la izquierda del extremo izquierdo del camino y se finaliza 6 
+    pasos a la derecha. 
+    Precondicion: Se debe poder avanzar 6 paso a la derecha desde donde se inicia el recorrido.  */
+
+    repetir 6 veces {
+         RevisarCamino()
+         MoverDerecha
+    }
+
+   
+}
+
+procedimiento AvanzarCaminoVertical(){
+    /* Proposito: Avanzar en el camino . Se inicia un paso hacia abajo del extremo inferior del camino y se finaliza 3 pasos
+    hacia arriba.
+    Precondicion: Desde donde se inicia el camino, se debe pode avanzar al menos 3 pasos hacia arriba */
+
+    repetir 3 veces {
+        RevisarCamino()
+        MoverArriba
+    }
+}
+
