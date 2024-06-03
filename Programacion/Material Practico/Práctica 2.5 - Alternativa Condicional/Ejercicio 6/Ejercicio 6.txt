@@ -81,7 +81,7 @@ EliminarPorcionAgua()
 
 procedimiento EliminarPorcionAgua(){
 /**/
- si (¬estaVacia? Ʌ (estaPintadaDeRojo? v estaPintadaDeVerde?)) entonces {
+ si (estaPintadaDeNegro?) entonces {
       Limpiar
 }
 }
