@@ -63,3 +63,25 @@ procedimiento IrASiguienteFila(){
         MoverIzquierda
     }
 }
+
+procedimiento MostrarSoloBarcos (){
+
+/* */
+
+repetir 7 veces {
+
+EliminarPorcionAgua()
+IrASiguienteFila()
+
+}
+EliminarPorcionAgua()
+
+
+}
+
+procedimiento EliminarPorcionAgua(){
+/**/
+ si (¬estaVacia? Ʌ (estaPintadaDeRojo? v estaPintadaDeVerde?)) entonces {
+      Limpiar
+}
+}
