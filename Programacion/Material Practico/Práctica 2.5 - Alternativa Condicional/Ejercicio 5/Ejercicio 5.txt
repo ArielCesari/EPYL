@@ -17,7 +17,7 @@ procedimiento ComerTodasLasBananas(){
 
 procedimiento RevisarSihayBananaParaComer() {
     /* Proposito: Revisar si hay bananas disponibles para que el monito pueda comer.
-    El monito se encuentra en la baldoza y finaliza alli mismo. */
+    Precondicion: El monito se encuentra en la baldoza y finaliza alli mismo. */
 
     si (estaPintadaDeRojo?) entonces{
         Limpiar

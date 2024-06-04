@@ -1,0 +1,89 @@
+procedimiento PrepararEstacionamiento() {
+
+    /* */ 
+
+    InstalarSistemaDeControl()
+    PrepararCocheras()
+    AcodicionarBoleterias()
+}
+
+
+procedimiento InstalarSistemaDeControl(){
+    /* */
+    
+    IrAcceso
+    ColocarBarrera
+    InstalarTicketera
+    ConfigurarTicketera
+
+}
+
+
+procedimiento PrepararCocheras(){
+    /* */ 
+
+    repetir 3 veces {
+       IrAProxNivel
+       MarcarPerimetroYColocarLedPorNivel()
+    }
+
+    MarcarPerimetroYColocarLedPorNivel()
+}
+
+
+procedimiento AcodicionarBoleterias(){
+    /* */ 
+    
+    IrABoleteria
+    ChequearMovilero()
+    IrAEscritorio
+    chequearCompu()
+    ImprimirTicketPrueba
+
+
+
+}
+
+procedimiento MarcarPerimetroYcolocarLed(){
+    /* */
+
+   
+    MarcarPerimetro
+    ColocarLed
+}
+
+
+procedimiento MarcarPerimetroYColocarLedPorNivel(){
+
+    /* */
+
+    repetir 79 veces {
+        MarcarPerimetroYcolocarLed
+        IrAProxCochera
+    }
+
+    MarcarPerimetroYcolocarLed
+}
+
+procedimiento ChequearMovilero(){
+    /* */
+
+    si (esAntiguoMob? v estaMalasCondMob?) entoncs {
+        CambiarMovilero
+    }
+} 
+
+procedimiento chequearCompu(){
+    /* */
+
+    si ¬(estaInstaladaCompu ∧ estaConfigCompu?) entonces {
+
+        InstalarCompu
+        InstalarSoftware
+    } InstalarSistemaDeControl{
+        InstalarSoftware
+    }
+}
+
+
+
