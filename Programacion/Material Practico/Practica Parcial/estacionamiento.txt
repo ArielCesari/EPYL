@@ -37,7 +37,7 @@ procedimiento AcodicionarBoleterias(){
     IrABoleteria
     ChequearMovilero()
     IrAEscritorio
-    chequearCompu()
+    ChequearCompu()
     ImprimirTicketPrueba
 
 
@@ -58,11 +58,11 @@ procedimiento MarcarPerimetroYColocarLedPorNivel(){
     /* */
 
     repetir 79 veces {
-        MarcarPerimetroYcolocarLed
+        MarcarPerimetroYcolocarLed()
         IrAProxCochera
     }
 
-    MarcarPerimetroYcolocarLed
+    MarcarPerimetroYcolocarLed()
 }
 
 procedimiento ChequearMovilero(){
