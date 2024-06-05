@@ -80,7 +80,7 @@ procedimiento chequearCompu(){
 
         InstalarCompu
         InstalarSoftware
-    } InstalarSistemaDeControl{
+    } sino {
         InstalarSoftware
     }
 }
