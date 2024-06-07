@@ -1,0 +1,27 @@
+35 maquinas distribuidas en un galpon  
+hacia adelante o a la izquierda una de otra
+
+Definir procedimiento  GestionarMaquinasDelGalpon()
+
+- Inicia y finaliza en la puerta del galpon 
+ 
+PREPARACION: 
+1) maquina de confeccion:
+- Aflilar cuchillas.
+- Detectar averias 
+- Lubricar mecanismos
+2) maquina de montaje:
+- Actualizar el sofware si estan prendidas
+- Cargar con cola
+- Ajustar tuercas de las maquinas 
+3) maquina de bordado 
+- Actualizar el sofware si estan prendidas
+- Cargar 15 hilos de diferentes colores 
+- Ajustar tuercas de las maquinas 
+
+4) Volver a la puerta del galpon y fichar 
+
+
+
+
+

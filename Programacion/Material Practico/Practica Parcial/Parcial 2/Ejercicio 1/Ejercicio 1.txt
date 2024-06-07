@@ -1,0 +1,148 @@
+procedimiento GestionarMaquinasDelGalpon() {
+    /* Proposito: Ayudar al robot  ZapaStart a Preparar las  35 maquinas  que se encuentran encuentran en un galpon. El robot inicia y finaliza en la puerta del galpon
+    Precondicion: Debe existir un galpon con 35 maquinas de tres tipos. Cada maquina debe estar ubicada hacia adelante o la izquierda de la otra  */ 
+
+    UbicarEnGalpon
+    PreparaMaquinaDeConfeccion() 
+    PrepararMaquinaDeMontaje() 
+    PrepararMaquinaDeBordado()
+    FinalizarTarea() 
+}
+
+procedimiento PreparaMaquinaDeConfeccion() {
+    /* Proposito: Ubicar al robot frente a una  maquina para chequear si es de confeccion y preparar la misma. Inicia en la puerta del galpon y finaliza en la maquina a verificar/preparar.
+      */
+
+    repetir 35 veces {
+
+        ChequearSiHayMaquina()  
+        ChequearSiEsMaquinaDeConfeccionYPreparar()  
+
+    }
+    
+    
+
+}
+
+procedimiento ChequearSiHayMaquina(){
+    /*Proposito: Verificar si existe una maquina para poder prepararla */
+
+    si(hayMaquinaAdelante?) entonces {
+        MoverAdelante
+    } 
+    sino {
+       MoverIzquierda
+    }
+}
+
+procedimiento ChequearSiEsMaquinaDeConfeccionYPreparar() {
+    /* Proposito: Verificiar si la maquina a preparar es del tipo de confeccion  */ 
+
+    si(esMaquinaConfeccion?) entonces {
+         RealizarTareasMaquinaConfeccion()  
+    }
+    
+}
+
+procedimiento RealizarTareasMaquinaConfeccion(){
+    /* Proposito: Realizar las tareas asiganadas para la maquina de confeccion.
+    Precondicion: Se debe estar trabajando sobre una maquina de confeccion. */ 
+
+    AfilarCuchillas
+    DetectarAverias
+    Lubricar
+
+}
+
+
+procedimiento PrepararMaquinaDeMontaje(){
+    /*Proposito: Ubicar al robot frente a una  maquina para chequear si es de montaje y preparar la misma. Inicia en una maquina  y finaliza en la maquina a verificar/preparar.  */
+
+    repetir 35 veces {
+
+    ChequearSiHayMaquina()  
+    ChequearSiEsMaquinaDeMontajeYPreparar() 
+
+
+
+    }
+
+
+}
+
+procedimiento ChequearSiEsMaquinaDeMontajeYPreparar() {
+    /* Proposito:  Verificiar si la maquina a preparar es del tipo de Montaje   */ 
+
+    si(esMaquinaMontaje?) entonces {
+         RealizarTareasMaquinaDeMontaje() 
+    }
+    
+}
+
+procedimiento RealizarTareasMaquinaDeMontaje(){
+    /* Proposito: Realizar las tareas asignadas a la maquina de montaje. 
+    Precondicion: La maquina debe estar prendida. Debemos estar trabajando en una maquina de Montaje.  */ 
+    
+    ChequearSiEstaPrendidaYActualizar() 
+    CargarCola
+    AjustarTuercas
+
+}
+
+procedimiento ChequearSiEstaPrendidaYActualizar(){
+    /* Proposito: Chequear si la maquina esta prendida. */ 
+
+    si (estaPrendida?) entonces {
+        ActualizarSoftware
+    }
+}
+
+procedimiento PrepararMaquinaDeBordado() {
+    /* Proposito Ubicar al robot frente a una  maquina para chequear si es de bordado y preparar la misma. Inicia en una maquina  y finaliza en la maquina a verificar/preparar. */ 
+    
+
+    repetir 35 veces {
+
+         ChequearSiHayMaquina() 
+         ChequearSiEsMaquinaDeBordadoYPreparar() 
+
+    }
+    
+
+
+}
+
+procedimiento ChequearSiEsMaquinaDeBordadoYPreparar(){
+    /* Proposito:  Verificiar si la maquina a preparar es del tipo de Bordado  */
+
+    si (esMaquinaBordado?) entonces {
+        RealizarTareasMaquinaDeBordado() 
+    }
+
+
+}
+
+procedimiento RealizarTareasMaquinaDeBordado() {
+    /* Proposito: Realizar las tareas asignadas a la maquina de bordado. 
+    Precondicion: La maquina debe estar prendida. Debemos estar trabajando en una maquina de bordado.   */ 
+
+ChequearSiEstaPrendidaYActualizar() 
+CargarHilos
+AjustarTuercas
+
+
+}
+
+
+procedimiento FinalizarTarea(){
+    /* Proposito: Ubicar al robot en la puerta del galpon de la fabrica y fichar indicando que finalizó su trabajo. Inicia en una maquina y finaliza en la puerta del galpon.
+    Precondicion: Para fichar, debe estar en la puerta del galpon.   */ 
+
+    UbicarEnGalpon
+    FicharSalida
+}
+
+
+
+
+

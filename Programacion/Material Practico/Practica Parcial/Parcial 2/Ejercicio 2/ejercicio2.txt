@@ -1,0 +1,120 @@
+
+procedimiento GuiarAPerseveranceACrater(){
+    /* Proposito:  Guiar al vehiculo Perseverance para que realice un recorrido seguro. Inicia en el lugar de aterrizaje y finaliza en un crater. 
+     Precondicion: Debe existir un camino en el cual Perseverance pueda avanzar 8 lugares hacia arriba, 13 hacia la derecha. */ 
+
+    RecorrerTramoDeCincoMetro()
+    RecorrerPrimerTramoDeSeisMetros()
+    RecorrerTramoDeTresMetros()
+    RecorrerSegundoTramoDeSeisMetros()
+    
+}
+
+
+
+
+procedimiento ChequearCamino(){
+    /*Proposito: Chequear si el proximo paso a dar es apto para que el robot pueda avanzar de manera segura. */ 
+
+    si (estaPintadaDeRojo? v estaVacia?) entonces  {
+          PintarNegro
+    }
+}
+
+
+procedimiento ChequearSuelo(){
+    /* Proposito: Chequear si el suelo que se encuentra a dos metros a la izquierda del camino es seguro o peligroso*/
+
+    si (estaPintadaDeVerde) entonces {
+        PintarRojo
+    }
+}
+
+procedimiento LlevarBrazoRoboticoAlSueloAChequear() {
+
+    /* Proposito: Moverse dos metros a la izquierda solo para poder evaluar el tipo de suelo.
+    Precondicion: Debemos poder movernos de manera circustancial, dos metros a la izquierda  */ 
+
+    repetir 2 veces {
+        MoverIzquierda
+        
+    }
+
+
+}
+
+procedimiento VolverAlCamino(){
+    /* */ 
+
+    repetir 2 veces {
+        MoverDerecha
+    }
+}
+
+
+procedimiento RecorrerTramoDeCincoMetro(){
+    /*Proposito: Recorrer  un tramo de cinco metros corroborando antes si es posible avanzar de manera segura. Comienza Al inicio del tramo y finaliza al final del mismo
+    Precondicion: El Robot debe poder moverse  5 metros hacia arriba  */
+
+    repetir  5 veces {
+        ChequearCamino()
+        MoverArriba
+    }
+    
+    ChequearCamino()
+    
+}
+
+procedimiento   RecorrerPrimerTramoDeSeisMetros() {
+    /* Proposito:  Recorrer  un tramo de seis metros corroborando antes si es posible avanzar de manera segura. Comienza Al inicio del tramo y finaliza al final del mismo. Utilizar brazo robotico para coorrobar 
+    el suelo que se encuentra a dos metros a la izquierda del inicio del camino. 
+    Precondicion: Desde donde inicia el camino, deben existir 6 metros hacia la derecha y 2 hacia la izquierda( tener en cuenta que el robot no se sale del camino, solo a modo de representacion es necesario
+    llevarlo hacia la izquierda 2 metros para poder chequear el suelo) */
+    
+    LlevarBrazoRoboticoAlSueloAChequear()
+    ChequearSuelo()
+    VolverAlCamino()
+    repetir 6 veces {
+
+        MoverDerecha
+        ChequearCamino()
+        
+        
+    }
+
+   
+}
+
+procedimiento   RecorrerSegundoTramoDeSeisMetros() {
+    /*  Proposito:  Recorrer  un tramo de seis metros corroborando antes si es posible avanzar de manera segura. Comienza Al inicio del tramo y finaliza  un metro a la derecha del final del mismo. Utilizar brazo robotico para coorrobar 
+    el suelo que se encuentra a dos metros a la izquierda del inicio del camino. 
+    Precondicion: Desde donde inicia el camino, deben existir 7 metros hacia la derecha y 2 hacia la izquierda( tener en cuenta que el robot no se sale del camino, solo a modo de representacion es necesario
+    llevarlo hacia la izquierda 2 metros para poder chequear el suelo)  */
+    
+    LlevarBrazoRoboticoAlSueloAChequear()
+    ChequearSuelo()
+    VolverAlCamino()
+    repetir 6 veces {
+
+        MoverDerecha
+        ChequearCamino()
+        
+        
+    }
+
+    MoverDerecha
+}
+
+procedimiento RecorrerTramoDeTresMetros(){
+    /*Proposito: Recorrer  un tramo de tres metros corroborando antes si es posible avanzar de manera segura. Comienza Al inicio del tramo y finaliza al final del mismo
+    Precondicion: El Robot debe poder moverse 3 metros hacia arriba*/
+
+    repetir 3 veces {
+        MoverArriba
+        ChequearCamino()
+        
+    }
+    
+
+
+}

@@ -1,0 +1,15 @@
+Guiar al vehiculo Perseverance para que realice un recorrido seguro. Inicia en el lugar de aterrizaje y finaliza en un crater. 
+
+GuiarPerseveranceACrater()
+
+avanzar, aplanar camino 
+
+camino plano = celda negra 
+Rocas = celda roja   -> cambiar negro
+Hielo = celdas blancas  -> cambiar negro 
+
+suelo blando = Celda Verde  -> cambiar a rojo
+Suelo duro = Celda negra 
+Suelo marcado como peligroso = Celda roja. 
+
+
