@@ -38,6 +38,7 @@ procedimiento AcodicionarBoleterias(){
     ChequearMovilero()
     IrAEscritorio
     ChequearCompu()
+    InstalarSofware()
     ImprimirTicketPrueba
 
 
@@ -73,16 +74,23 @@ procedimiento ChequearMovilero(){
     }
 } 
 
-procedimiento chequearCompu(){
+procedimiento ChequearCompu(){
     /* */
 
-    si ¬(estaInstaladaCompu ∧ estaConfigCompu?) entonces {
+    si (¬estaInstaladaCompu) entonces {
 
         InstalarCompu
+     }  
+}
+
+procedimiento InstalarSofware(){
+    /* */
+
+    si (¬estaConfigCompu?) entonces {
+
+        
         InstalarSoftware
-    } sino {
-        InstalarSoftware
-    }
+    } 
 }
 
 

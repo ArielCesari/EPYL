@@ -1,0 +1,135 @@
+/* Ejercio 3 */ 
+
+
+a- Renombrar el procedimiento DibujarFigura() por un nombre adecuado segun el dibujo
+b- Definir los procedimientos invocados internamente en DibujarFigura()
+para que realice el dibujo. Renombrar en cada lugar donde se invocan . 
+Ademas puede definir todos los procedimientos que sean necesarios 
+para cumplir con las buenas practicas de programacion.
+c- Crear el programa que realice el dibujo.
+
+- Nota: No hace falta documentar este ejercio.
+
+
+procedimiento DibujarFigura(){
+
+    /* El Cabezal inicia en el extremo inferior de la primera figura(marcado en la imagen) */ 
+
+    repetir 2 veces {
+        HacerAlgo1() 
+        MoverArriba
+        HacerAlgo2()
+        MoverArriba
+    }
+
+    HacerAlgo1()
+    HacerAlgo3()
+}
+
+a- procedimiento DibujarCincoLetrasT()
+
+
+
+
+procedimiento DibujarPrimerParteTRoja(){
+    /* */ 
+
+    repetir 3 veces {
+        PintarRojo
+        MoverArriba
+    }
+    
+}
+
+procedimiento DibujarSegundaParteTRoja(){
+    /* */ 
+    
+    MoverIzquierda
+    repetir 2 veces {
+
+    PintarRojo
+    MoverDerecha
+   }  
+   PintarRojo
+   
+}
+
+
+procedimiento DibujarPrimerParteTNegra(){
+    /* */ 
+
+    repetir 3 veces {
+        PintarNegro
+        MoverArriba
+    }
+    
+}
+
+procedimiento DibujarSegundaParteTNegra(){
+    /* */ 
+    
+    MoverIzquierda
+    repetir 2 veces {
+
+    PintarNegro
+    MoverDerecha
+   }  
+   PintarNeegro
+   
+}
+
+
+procedimiento HacerAlgo1(){
+    /* */
+
+     DibujarPrimerParteTRoja()
+     DibujarSegundaParteTRoja()
+
+
+}
+
+
+procedimiento HacerAlgo2(){
+
+    DibujarPrimerParteTNegra()
+    DibujarSegundaParteTNegra()
+
+
+}
+
+
+procedimiento HacerAlgo3(){
+    /* */ 
+
+    VolverAlInicio()
+
+
+}
+
+
+procedimiento VolverAlInicioPrimerPaso(){
+
+    repetir 5 veces {
+
+        MoverIzquierda
+    }
+
+    VolverAlInicio()
+
+
+}
+
+
+procedimiento VolverAlInicio() {
+    /* */ 
+
+    repetir 19 veces {
+        MoverAbajo
+    }
+}
+
+
+programa {
+
+    DibujarCincoLetrasT()
+}
